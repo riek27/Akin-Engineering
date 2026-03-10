@@ -1,208 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Kaku Sanitation Services South Sudan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Akin Engineering</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">Kaku <span>Sanitation</span></a>
-            <button class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+  <nav class="navbar" id="navbar">
+    <div class="logo">AKIN</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Breadcrumb -->
-    <section class="breadcrumb">
-        <div class="container">
-            <div class="breadcrumb-content">
-                <a href="index.html">Home</a>
-                <span>/</span>
-                <span>Contact Us</span>
-            </div>
-        </div>
-    </section>
+  <section class="page-header">
+    <div class="container"><h1>Contact us</h1></div>
+  </section>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <h1>Contact Us</h1>
-            <p>Get in touch with our team for all your sanitation needs</p>
+  <section class="section-padding">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- contact info -->
+        <div class="contact-info">
+          <h3>Akin Engineering</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Hai Malakal, Juba, South Sudan</p>
+          <p><i class="fas fa-phone-alt"></i> <a href="tel:+211981260947">0981 260 947</a>  |  <a href="tel:+211927969777">0927 969 777</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:info@akinengineering.ss">info@akinengineering.ss</a></p>
+          <p><i class="fas fa-clock"></i> Mon–Fri 8:00 – 17:00, Sat 9:00 – 13:00</p>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section contact">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-form">
-                    <h2>Send Us a Message</h2>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Service Interested In</label>
-                            <select id="service" class="form-control">
-                                <option value="">Select a service</option>
-                                <option value="bioseptic">Bioseptic Tanks</option>
-                                <option value="grease">Grease Traps</option>
-                                <option value="water">UV Water Purifiers</option>
-                                <option value="plumbing">Plumbing Services</option>
-                                <option value="placenta">Placenta Pits</option>
-                                <option value="incinerators">Incinerators</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <div>
-                        <h2>Get In Touch</h2>
-                        <p>We're here to help with all your sanitation needs. Reach out to us through any of the following channels:</p>
-                        
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h3>Our Location</h3>
-                                <p>Gudele, Juba, South Sudan</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h3>Phone Number</h3>
-                                <p>+211 912 345 678</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h3>Email Address</h3>
-                                <p>info@kakusanitation.com</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-globe"></i>
-                            <div>
-                                <h3>Website</h3>
-                                <p>www.kakusanitation.com</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <h3>Business Hours</h3>
-                                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                                <p>Saturday: 9:00 AM - 1:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.753091567486!2d31.58224657482051!3d4.855442095959616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x171f3a8c7d7b8b8b%3A0x9c3b8d1b1b1b1b1b!2sGudele%2C%20Juba%2C%20South%20Sudan!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
+        <!-- contact form -->
+        <div class="contact-form">
+          <h3>Send a message</h3>
+          <form id="contactForm">
+            <div class="form-group"><input type="text" placeholder="Your name" required></div>
+            <div class="form-group"><input type="email" placeholder="Email address" required></div>
+            <div class="form-group"><input type="text" placeholder="Phone (optional)"></div>
+            <div class="form-group"><textarea rows="5" placeholder="How can we help?"></textarea></div>
+            <button type="submit" class="btn-primary">Send message <i class="fas fa-paper-plane"></i></button>
+          </form>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Kaku Sanitation</h3>
-                    <p>Providing innovative, eco-friendly sanitation solutions for South Sudan since 2015.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="services.html">Services</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Our Services</h3>
-                    <a href="services.html">Bioseptic Tanks</a>
-                    <a href="services.html">Grease Traps</a>
-                    <a href="services.html">UV Water Purifiers</a>
-                    <a href="services.html">Plumbing Services</a>
-                    <a href="services.html">Incinerators</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Gudele, Juba, South Sudan</p>
-                    <p><i class="fas fa-phone"></i> +211 912 345 678</p>
-                    <p><i class="fas fa-envelope"></i> info@kakusanitation.com</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Kaku Sanitation Services South Sudan. All Rights Reserved. | Designed by <a href="https://wa.me/211981211736?text=Hi%20Riek%20Gatluak,%20I%20saw%20your%20design%20for%20Kaku%20Sanitation%20Services%20and%20I'm%20interested%20in%20your%20work" target="_blank">Riek Gatluak</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Widget -->
-    <div class="whatsapp-widget">
-        <div class="whatsapp-button" id="whatsappButton">
-            <i class="fab fa-whatsapp"></i>
-        </div>
-        <div class="whatsapp-popup" id="whatsappPopup">
-            <div class="whatsapp-header">
-                <div class="whatsapp-avatar">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="whatsapp-info">
-                    <h4>Kaku Sanitation</h4>
-                    <p>Typically replies within an hour</p>
-                </div>
-            </div>
-            <div class="whatsapp-body">
-                <div class="whatsapp-message">
-                    Hello! 👋 How can we help you with your sanitation needs?
-                </div>
-                <div class="whatsapp-actions">
-                    <a href="https://wa.me/211912345678?text=Hi%20Kaku%20Sanitation,%20I%20would%20like%20to%20get%20more%20information%20about%20your%20services" class="btn" target="_blank">Start Chat</a>
-                    <button class="btn btn-outline" id="closePopup">Maybe Later</button>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- map section -->
+  <section class="map-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.750622335318!2d31.579941!3d4.842000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwNTAnMzEuMiJOIDMxwrAzNCczNy4wIkU!5e0!3m2!1sen!2s!4v1620000000000" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- call to action (same background) -->
+  <section class="cta-section">
+    <div class="cta-overlay">
+      <div class="container">
+        <h2>We’re looking forward to hearing from you</h2>
+        <a href="tel:+211981260947" class="btn-cta">Call now <i class="fas fa-phone-alt"></i></a>
+      </div>
+    </div>
+  </section>
+
+   <footer>
+    <div class="footer-grid">
+      <div><h4>Akin Engineering</h4><p><i class="fas fa-map-marker-alt"></i> Hai Malakal, Juba</p><p><i class="fas fa-phone"></i> 0981 260 947  |  0927 969 777</p></div>
+      <div><h4>Quick links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li></ul></div>
+      <div><h4>Services</h4><ul><li>Architecture</li><li>Construction</li><li>Plumbing & Electrical</li></ul></div>
+      <div><h4>Connect</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Akin Engineering — excellence built in South Sudan</p></div>
+  </footer>
+  <script src="script.js"></script>
 </body>
+</html>
 </html>
