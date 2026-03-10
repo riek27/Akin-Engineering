@@ -1,199 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Kaku Sanitation Services South Sudan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Akin Engineering</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">Kaku <span>Sanitation</span></a>
-            <button class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+  <nav class="navbar" id="navbar">
+    <div class="logo">AKIN</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Breadcrumb -->
-    <section class="breadcrumb">
-        <div class="container">
-            <div class="breadcrumb-content">
-                <a href="index.html">Home</a>
-                <span>/</span>
-                <span>Our Services</span>
-            </div>
-        </div>
-    </section>
+  <section class="page-header">
+    <div class="container"><h1>Our services</h1></div>
+  </section>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <h1>Our Services</h1>
-            <p>Comprehensive sanitation solutions for residential, commercial, and institutional needs</p>
+  <!-- All services detailed -->
+  <section class="section-padding">
+    <div class="container">
+      <h2 class="section-title">What we offer</h2>
+      <div class="services-detailed-grid">
+        <div class="service-detailed">
+          <i class="fas fa-drafting-compass"></i>
+          <h3>Architecture design</h3>
+          <p>Residential, commercial, and industrial designs — from concept to construction drawings.</p>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="section services">
-        <div class="container">
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="assets/aqua.jpg" alt="Bioseptic Tanks">
-                    </div>
-                    <div class="service-content">
-                        <h3>Bioseptic Tanks</h3>
-                        <p>Advanced septic systems that use biological processes to treat wastewater, making it safe for disposal or reuse. Our bioseptic tanks are odorless, require minimal maintenance, and last for decades.</p>
-                        <a href="contact.html" class="btn btn-outline">Get Quote</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="assets/aquaq.jpg" alt="Grease Traps">
-                    </div>
-                    <div class="service-content">
-                        <h3>Grease Traps</h3>
-                        <p>Effective grease interception systems for commercial kitchens to prevent blockages and environmental contamination. Our grease traps are designed for easy maintenance and long-term reliability.</p>
-                        <a href="contact.html" class="btn btn-outline">Get Quote</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="assets/fuvwater.jpg" alt="UV Water Purifiers">
-                    </div>
-                    <div class="service-content">
-                        <h3>UV Water Purifiers</h3>
-                        <p>Ultraviolet water purification systems that eliminate harmful microorganisms without chemicals. Our UV purifiers provide safe drinking water for homes, schools, and healthcare facilities.</p>
-                        <a href="contact.html" class="btn btn-outline">Get Quote</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="assets/fplumber.jpg" alt="Plumbing Services">
-                    </div>
-                    <div class="service-content">
-                        <h3>Plumbing Services</h3>
-                        <p>Comprehensive plumbing solutions for residential, commercial, and institutional clients. We handle everything from new installations to repairs and maintenance.</p>
-                        <a href="contact.html" class="btn btn-outline">Get Quote</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Placenta Pits">
-                    </div>
-                    <div class="service-content">
-                        <h3>Placenta Pits</h3>
-                        <p>Specialized disposal systems for medical facilities to safely handle biological waste. Our placenta pits are designed with safety and environmental protection in mind.</p>
-                        <a href="contact.html" class="btn btn-outline">Get Quote</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Incinerators">
-                    </div>
-                    <div class="service-content">
-                        <h3>Incinerators</h3>
-                        <p>High-temperature waste disposal systems for safe and efficient destruction of various materials. Our incinerators are ideal for medical, agricultural, and general waste.</p>
-                        <a href="contact.html" class="btn btn-outline">Get Quote</a>
-                    </div>
-                </div>
-            </div>
+        <div class="service-detailed">
+          <i class="fas fa-hard-hat"></i>
+          <h3>Building & construction</h3>
+          <p>General contracting, project management, site supervision, and quality control.</p>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section" style="background-color: var(--beige);">
-        <div class="container">
-            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-                <h2>Ready to Improve Your Sanitation System?</h2>
-                <p>Contact us today for a free consultation and quote. Our team of experts is ready to provide you with the best sanitation solutions tailored to your specific needs.</p>
-                <a href="contact.html" class="btn" style="margin-top: 20px;">Get in Touch</a>
-            </div>
+        <div class="service-detailed">
+          <i class="fas fa-wrench"></i>
+          <h3>Plumbing installation</h3>
+          <p>Water supply, drainage, sanitary fixtures, and solar water heating.</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Kaku Sanitation</h3>
-                    <p>Providing innovative, eco-friendly sanitation solutions for South Sudan since 2015.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="services.html">Services</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Our Services</h3>
-                    <a href="services.html">Bioseptic Tanks</a>
-                    <a href="services.html">Grease Traps</a>
-                    <a href="services.html">UV Water Purifiers</a>
-                    <a href="services.html">Plumbing Services</a>
-                    <a href="services.html">Incinerators</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Gudele, Juba, South Sudan</p>
-                    <p><i class="fas fa-phone"></i> +211 912 345 678</p>
-                    <p><i class="fas fa-envelope"></i> info@kakusanitation.com</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2026 Kaku Sanitation Services South Sudan. All Rights Reserved. | Designed by <a href="https://wa.me/211981211736?text=Hi%20Riek%20Gatluak,%20I%20saw%20your%20design%20for%20Kaku%20Sanitation%20Services%20and%20I'm%20interested%20in%20your%20work" target="_blank">Riek Gatluak</a></p>
-            </div>
+        <div class="service-detailed">
+          <i class="fas fa-bolt"></i>
+          <h3>Electrical installation</h3>
+          <p>Wiring, backup generators, lighting design, and smart home systems.</p>
         </div>
-    </footer>
-
-    <!-- WhatsApp Widget -->
-    <div class="whatsapp-widget">
-        <div class="whatsapp-button" id="whatsappButton">
-            <i class="fab fa-whatsapp"></i>
+        <div class="service-detailed">
+          <i class="fas fa-paint-brush"></i>
+          <h3>Interior finishing</h3>
+          <p>Tiling, painting, ceilings, and custom joinery.</p>
         </div>
-        <div class="whatsapp-popup" id="whatsappPopup">
-            <div class="whatsapp-header">
-                <div class="whatsapp-avatar">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="whatsapp-info">
-                    <h4>Kaku Sanitation</h4>
-                    <p>Typically replies within an hour</p>
-                </div>
-            </div>
-            <div class="whatsapp-body">
-                <div class="whatsapp-message">
-                    Hello! 👋 How can we help you with your sanitation needs?
-                </div>
-                <div class="whatsapp-actions">
-                    <a href="https://wa.me/211912345678?text=Hi%20Kaku%20Sanitation,%20I%20would%20like%20to%20get%20more%20information%20about%20your%20services" class="btn" target="_blank">Start Chat</a>
-                    <button class="btn btn-outline" id="closePopup">Maybe Later</button>
-                </div>
-            </div>
+        <div class="service-detailed">
+          <i class="fas fa-trowel"></i>
+          <h3>Civil works</h3>
+          <p>Roads, drainage, and external infrastructure.</p>
         </div>
+      </div>
     </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- full package section with image -->
+  <section class="section-padding bg-light">
+    <div class="container grid-2">
+      <div>
+        <h2 class="section-title" style="margin-top:0;">Full‑service packages</h2>
+        <p>From groundbreaking to handover, we offer integrated solutions: architecture, structural work, MEP (mechanical, electrical, plumbing), and finishing. You get one point of contact, streamlined coordination, and faster delivery.</p>
+        <p>We handle the whole construction process, so you can focus on your vision.</p>
+        <a href="contact.html" class="btn-primary">Get a quote</a>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" alt="full construction">
+      </div>
+    </div>
+  </section>
+
+  <!-- call to action -->
+  <section class="cta-section">
+    <div class="cta-overlay">
+      <div class="container">
+        <h2>Need a specific service?</h2>
+        <p>Our team is ready to help</p>
+        <a href="contact.html" class="btn-cta">Contact us <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div><h4>Akin Engineering</h4><p><i class="fas fa-map-marker-alt"></i> Hai Malakal, Juba</p><p><i class="fas fa-phone"></i> 0981 260 947  |  0927 969 777</p></div>
+      <div><h4>Quick links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li></ul></div>
+      <div><h4>Services</h4><ul><li>Architecture</li><li>Construction</li><li>Plumbing & Electrical</li></ul></div>
+      <div><h4>Connect</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a></div></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Akin Engineering — excellence built in South Sudan</p></div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
