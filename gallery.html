@@ -3,72 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery | Akin Engineering</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <title>Akin Engineering | Gallery</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar" id="navbar">
-    <div class="logo">AKIN</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="gallery.html" class="active">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section class="page-header">
-    <div class="container"><h1>Project gallery</h1></div>
-  </section>
-
-  <!-- Featured project (with image) -->
-  <section class="section-padding">
-    <div class="container">
-      <h2 class="section-title">Featured: Juba Commercial Tower</h2>
-      <div class="featured-project">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="featured project">
-        <p>A 12‑storey mixed‑use building completed in 2024 — full architectural design, construction, MEP.</p>
-      </div>
+  <header>
+    <div class="container header-flex">
+      <a href="index.html" class="logo">AKIN <span>⚙️</span></a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="menu"><i class="fas fa-bars"></i></button>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- Gallery grid (6 images) -->
-  <section class="section-padding bg-light">
-    <div class="container">
-      <h2 class="section-title">More works</h2>
-      <div class="gallery-grid six-col">
-        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop" alt="gallery 1">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="gallery 2">
-        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop" alt="gallery 3">
-        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop" alt="gallery 4">
-        <img src="https://images.unsplash.com/photo-1487958449943-2429e8be862c?q=80&w=2070&auto=format&fit=crop" alt="gallery 5">
-        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" alt="gallery 6">
-      </div>
-    </div>
-  </section>
-
-  <!-- call to action -->
-  <section class="cta-section">
-    <div class="cta-overlay">
+  <main>
+    <section class="page-header">
       <div class="container">
-        <h2>Want to see similar work on your site?</h2>
-        <a href="contact.html" class="btn-cta">Start your project</a>
+        <h1>Project Gallery</h1>
+        <p>Selected works showcasing our craftsmanship</p>
+      </div>
+    </section>
+
+    <!-- Featured Project -->
+    <section class="section">
+      <div class="container featured-project">
+        <div class="featured-image">
+          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2070&auto=format&fit=crop" alt="Featured project">
+        </div>
+        <div class="featured-text">
+          <h2 class="section-title"><span>Featured:</span> Juba Commercial Complex</h2>
+          <p>A landmark mixed-use development in the heart of Juba. Akin Engineering handled the complete architectural design, construction, and MEP installations. The project was delivered 2 months ahead of schedule and received the 2025 South Sudan Construction Excellence Award.</p>
+          <p><strong>Scope:</strong> Architecture, Construction, Plumbing, Electrical, Interior Finishing</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 Gallery Images -->
+    <section class="section bg-light">
+      <div class="container">
+        <h2 class="section-title"><span>More</span> projects</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=1965&auto=format&fit=crop');"></div>
+          <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1d3fa86c58?q=80&w=1974&auto=format&fit=crop');"></div>
+          <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1558036117-15d82a90b9b1?q=80&w=2070&auto=format&fit=crop');"></div>
+          <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2070&auto=format&fit=crop');"></div>
+          <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop');"></div>
+          <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071&auto=format&fit=crop');"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="cta-section" style="background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop');">
+      <div class="cta-overlay"></div>
+      <div class="container cta-content">
+        <h2>Inspired by our work?</h2>
+        <p>Let’s create something remarkable together</p>
+        <a href="contact.html" class="btn btn-primary">Start your project →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <!-- same footer as index -->
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">AKIN ENGINEERING</div>
+        <p><i class="fas fa-map-marker-alt"></i> Hai Malakal, Juba, South Sudan</p>
+        <p><i class="fas fa-phone-alt"></i> 0981 260 947 | 0927 969 777</p>
+        <p><i class="fas fa-envelope"></i> info@akinengineering.com</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#architecture">Architecture</a></li>
+          <li><a href="services.html#construction">Construction</a></li>
+          <li><a href="services.html#plumbing">Plumbing</a></li>
+          <li><a href="services.html#electrical">Electrical</a></li>
+          <li><a href="services.html#finishing">Interior Finishing</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-   <footer>
-    <div class="footer-grid">
-      <div><h4>Akin Engineering</h4><p><i class="fas fa-map-marker-alt"></i> Hai Malakal, Juba</p><p><i class="fas fa-phone"></i> 0981 260 947  |  0927 969 777</p></div>
-      <div><h4>Quick links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li></ul></div>
-      <div><h4>Services</h4><ul><li>Architecture</li><li>Construction</li><li>Plumbing & Electrical</li></ul></div>
-      <div><h4>Connect</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a></div></div>
+    <div class="footer-bottom">
+      <p>© 2026 Akin Engineering — excellence built in South Sudan</p>
     </div>
-    <div class="footer-bottom"><p>© 2026 Akin Engineering — excellence built in South Sudan</p></div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
