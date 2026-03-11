@@ -3,101 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | Akin Engineering</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <title>Akin Engineering | Services</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar" id="navbar">
-    <div class="logo">AKIN</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section class="page-header">
-    <div class="container"><h1>Our services</h1></div>
-  </section>
-
-  <!-- All services detailed -->
-  <section class="section-padding">
-    <div class="container">
-      <h2 class="section-title">What we offer</h2>
-      <div class="services-detailed-grid">
-        <div class="service-detailed">
-          <i class="fas fa-drafting-compass"></i>
-          <h3>Architecture design</h3>
-          <p>Residential, commercial, and industrial designs — from concept to construction drawings.</p>
-        </div>
-        <div class="service-detailed">
-          <i class="fas fa-hard-hat"></i>
-          <h3>Building & construction</h3>
-          <p>General contracting, project management, site supervision, and quality control.</p>
-        </div>
-        <div class="service-detailed">
-          <i class="fas fa-wrench"></i>
-          <h3>Plumbing installation</h3>
-          <p>Water supply, drainage, sanitary fixtures, and solar water heating.</p>
-        </div>
-        <div class="service-detailed">
-          <i class="fas fa-bolt"></i>
-          <h3>Electrical installation</h3>
-          <p>Wiring, backup generators, lighting design, and smart home systems.</p>
-        </div>
-        <div class="service-detailed">
-          <i class="fas fa-paint-brush"></i>
-          <h3>Interior finishing</h3>
-          <p>Tiling, painting, ceilings, and custom joinery.</p>
-        </div>
-        <div class="service-detailed">
-          <i class="fas fa-trowel"></i>
-          <h3>Civil works</h3>
-          <p>Roads, drainage, and external infrastructure.</p>
-        </div>
-      </div>
+  <header>
+    <div class="container header-flex">
+      <a href="index.html" class="logo">AKIN <span>⚙️</span></a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="menu"><i class="fas fa-bars"></i></button>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- full package section with image -->
-  <section class="section-padding bg-light">
-    <div class="container grid-2">
-      <div>
-        <h2 class="section-title" style="margin-top:0;">Full‑service packages</h2>
-        <p>From groundbreaking to handover, we offer integrated solutions: architecture, structural work, MEP (mechanical, electrical, plumbing), and finishing. You get one point of contact, streamlined coordination, and faster delivery.</p>
-        <p>We handle the whole construction process, so you can focus on your vision.</p>
-        <a href="contact.html" class="btn-primary">Get a quote</a>
-      </div>
-      <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" alt="full construction">
-      </div>
-    </div>
-  </section>
-
-  <!-- call to action -->
-  <section class="cta-section">
-    <div class="cta-overlay">
+  <main>
+    <section class="page-header">
       <div class="container">
-        <h2>Need a specific service?</h2>
-        <p>Our team is ready to help</p>
-        <a href="contact.html" class="btn-cta">Contact us <i class="fas fa-arrow-right"></i></a>
+        <h1>Our Services</h1>
+        <p>Comprehensive solutions for every phase of construction</p>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- What We Offer (full list) -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title"><span>What</span> we offer</h2>
+        <div class="services-full-grid">
+          <!-- Architecture Design -->
+          <div class="service-card">
+            <i class="fas fa-drafting-compass"></i>
+            <h3>Architecture Design</h3>
+            <p>Residential, commercial, and industrial designs — from concept to construction drawings.</p>
+          </div>
+          <!-- Building & Construction -->
+          <div class="service-card">
+            <i class="fas fa-hard-hat"></i>
+            <h3>Building & Construction</h3>
+            <p>General contracting, project management, site supervision, and quality control.</p>
+          </div>
+          <!-- Plumbing Installation -->
+          <div class="service-card">
+            <i class="fas fa-water"></i>
+            <h3>Plumbing Installation</h3>
+            <p>Water supply, drainage, sanitary fixtures, and solar water heating.</p>
+          </div>
+          <!-- Electrical Installation -->
+          <div class="service-card">
+            <i class="fas fa-bolt"></i>
+            <h3>Electrical Installation</h3>
+            <p>Wiring, backup generators, lighting design, and smart home systems.</p>
+          </div>
+          <!-- Interior Finishing -->
+          <div class="service-card">
+            <i class="fas fa-paint-roller"></i>
+            <h3>Interior Finishing</h3>
+            <p>Tiling, painting, ceilings, and custom joinery.</p>
+          </div>
+          <!-- Civil Works -->
+          <div class="service-card">
+            <i class="fas fa-road"></i>
+            <h3>Civil Works</h3>
+            <p>Roads, drainage, and external infrastructure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Premium Construction Section (with image) -->
+    <section class="section bg-light">
+      <div class="container premium-grid">
+        <div class="premium-image">
+          <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=1965&auto=format&fit=crop" alt="Premium construction">
+        </div>
+        <div class="premium-text">
+          <h2 class="section-title"><span>Premium</span> construction</h2>
+          <p>As a full construction company, we handle every aspect of your project — from groundbreaking to final finishes. Our in-house teams of engineers, technicians, and craftsmen ensure seamless coordination, superior quality, and timely delivery. Whether it's a residential villa or a commercial complex, we bring expertise and passion to every build.</p>
+          <a href="contact.html" class="btn btn-primary">Discuss your project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section class="cta-section" style="background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop');">
+      <div class="cta-overlay"></div>
+      <div class="container cta-content">
+        <h2>Need a reliable construction partner?</h2>
+        <p>We’re ready to bring your vision to life</p>
+        <a href="contact.html" class="btn btn-primary">Start your project →</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <div class="footer-grid">
-      <div><h4>Akin Engineering</h4><p><i class="fas fa-map-marker-alt"></i> Hai Malakal, Juba</p><p><i class="fas fa-phone"></i> 0981 260 947  |  0927 969 777</p></div>
-      <div><h4>Quick links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li></ul></div>
-      <div><h4>Services</h4><ul><li>Architecture</li><li>Construction</li><li>Plumbing & Electrical</li></ul></div>
-      <div><h4>Connect</h4><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a></div></div>
+    <!-- same footer as index -->
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">AKIN ENGINEERING</div>
+        <p><i class="fas fa-map-marker-alt"></i> Hai Malakal, Juba, South Sudan</p>
+        <p><i class="fas fa-phone-alt"></i> 0981 260 947 | 0927 969 777</p>
+        <p><i class="fas fa-envelope"></i> info@akinengineering.com</p>
+      </div>
+      <div>
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#architecture">Architecture</a></li>
+          <li><a href="services.html#construction">Construction</a></li>
+          <li><a href="services.html#plumbing">Plumbing</a></li>
+          <li><a href="services.html#electrical">Electrical</a></li>
+          <li><a href="services.html#finishing">Interior Finishing</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-bottom"><p>© 2026 Akin Engineering — excellence built in South Sudan</p></div>
+    <div class="footer-bottom">
+      <p>© 2026 Akin Engineering — excellence built in South Sudan</p>
+    </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
