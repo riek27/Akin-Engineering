@@ -1,161 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akin Engineering | Home</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>IDEA-South Sudan | Youth-Led Humanitarian & Development Organization</title>
+    <meta name="description" content="IDEA-South Sudan is a youth-led, non-profit organization working on humanitarian, development, and peacebuilding initiatives in South Sudan.">
+    <meta name="keywords" content="IDEA-South Sudan, youth-led NGO, peacebuilding, development, humanitarian, Bor, Juba, South Sudan">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['"Playfair Display"', 'Georgia', 'serif'],
+                        'body': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'navy': '#06283D',
+                        'navy-light': '#0a3d5c',
+                        'forest': '#1B5E45',
+                        'forest-light': '#247a5a',
+                        'gold': '#D4A017',
+                        'gold-light': '#e8b830',
+                        'cream': '#fdfaf3',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root { --navy: #06283D; --forest: #1B5E45; --gold: #D4A017; }
+        * { scroll-behavior: smooth; }
+        body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; background-color: #ffffff; overflow-x: hidden; }
+        .font-display { font-family: 'Playfair Display', Georgia, serif; }
+
+        .card-hover { transition: transform 0.4s cubic-bezier(0.23,1,0.32,1), box-shadow 0.4s ease; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 30px 50px -12px rgba(6,40,61,0.2); }
+
+        .overlay-hero { background: linear-gradient(135deg, rgba(6,40,61,0.6) 0%, rgba(6,40,61,0.35) 30%, rgba(27,94,69,0.15) 65%, rgba(6,40,61,0.3) 100%); }
+        .overlay-impact { background: rgba(6,40,61,0.5); }
+
+        .dropdown-menu { opacity: 0; transform: translateY(12px); pointer-events: none; transition: 0.3s ease; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); }
+        .dropdown-trigger:hover .dropdown-menu, .dropdown-menu.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+        @keyframes bounceDown { 0%,100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
+        .scroll-indicator { animation: bounceDown 2s infinite; }
+
+        @keyframes floatGentle { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        .float-gentle { animation: floatGentle 5s infinite; }
+        .float-gentle-delay { animation: floatGentle 5s 2.5s infinite; }
+
+        @keyframes pulseGold { 0%,100% { box-shadow: 0 0 0 0 rgba(212,160,23,0.6); } 50% { box-shadow: 0 0 0 15px rgba(212,160,23,0); } }
+        .pulse-gold { animation: pulseGold 2.5s infinite; }
+
+        .mobile-menu { transform: translateX(100%); transition: 0.4s cubic-bezier(0.23,1,0.32,1); }
+        .mobile-menu.open { transform: translateX(0); }
+        .mobile-dropdown-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .mobile-dropdown-menu.open { max-height: 500px; }
+        .mobile-dropdown-btn i { transition: transform 0.3s; }
+        .mobile-dropdown-btn.open i { transform: rotate(180deg); }
+
+        .partner-carousel-wrapper { overflow: hidden; mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%); }
+        .partner-carousel-track { display: flex; width: max-content; animation: infiniteScroll 35s linear infinite; }
+        .partner-carousel-track:hover { animation-play-state: paused; }
+        @keyframes infiniteScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.23,1,0.32,1), transform 0.8s cubic-bezier(0.23,1,0.32,1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .img-reveal { clip-path: inset(0 100% 0 0); transition: clip-path 1.2s cubic-bezier(0.23,1,0.32,1); }
+        .img-reveal.visible { clip-path: inset(0 0% 0 0); }
+
+        @media (max-width: 767px) {
+            .img-reveal { clip-path: inset(0 0% 0 0) !important; opacity: 1 !important; transform: none !important; }
+        }
+
+        .glass { background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.4); }
+        .glass-dark { background: rgba(6,40,61,0.75); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+        .support-btn { background: linear-gradient(135deg, #D4A017, #e8b830); color: #06283D; font-weight: 700; }
+        .support-btn:hover { background: linear-gradient(135deg, #e8b830, #D4A017); transform: translateY(-1px); box-shadow: 0 10px 20px rgba(212,160,23,0.4); }
+    </style>
 </head>
-<body>
-  <header>
-    <div class="container header-flex">
-      <a href="index.html" class="logo">AKIN <span>⚙️</span></a>
-      <nav class="nav">
-        <button class="nav-toggle" aria-label="menu"><i class="fas fa-bars"></i></button>
-        <ul class="nav-menu">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<body class="text-gray-800 bg-white">
+
+    <!-- Top Bar -->
+    <div class="hidden lg:block bg-navy text-white/85 text-xs py-2.5 px-6 z-50 relative">
+        <div class="max-w-7xl mx-auto flex justify-between">
+            <div class="flex items-center gap-6">
+                <a href="tel:+211915088344" class="hover:text-gold flex items-center gap-2"><i class="fa-solid fa-phone text-[10px] text-gold"></i> +211 915 088 344</a>
+                <span class="text-white/25">|</span>
+                <a href="mailto:info@idea-ss.com" class="hover:text-gold flex items-center gap-2"><i class="fa-solid fa-envelope text-[10px] text-gold"></i> info@idea-ss.com</a>
+            </div>
+            <div class="flex items-center gap-5">
+                <a href="#volunteer" class="hover:text-gold">Volunteer</a>
+                <a href="#contact" class="hover:text-gold">Contact</a>
+                <a href="#donate" class="bg-gold text-navy font-semibold px-5 py-2 rounded-full pulse-gold">Donate Now <i class="fa-solid fa-heart ml-1.5"></i></a>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <main>
-    <!-- Hero Section (with typing effect) -->
-    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop');">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <h1>Akin <span>Engineering</span></h1>
-        <div class="typing-wrapper">
-          <span class="static">we build</span>
-          <span class="typed" id="typed"></span>
+    <!-- Main Navigation -->
+    <nav id="mainNav" class="fixed top-0 lg:top-[37px] w-full z-40 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between py-4">
+                <a href="#" class="flex items-center gap-3 z-50">
+                    <div class="logo-image-container">
+                        <img src="assets/idea-logo.jpg" alt="IDEA-South Sudan Logo" class="logo-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=font-display font-bold text-navy text-lg>IDEA</span>'; this.parentElement.style.background='#D4A017'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="font-display font-semibold text-white text-lg leading-tight block">IDEA-South Sudan</span>
+                        <span class="text-white/70 text-[10px] tracking-widest uppercase">Youth-Led Humanitarian & Development</span>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center gap-1">
+                    <a href="#" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium">Home</a>
+                    <div class="dropdown-trigger relative">
+                        <button class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium flex items-center gap-1">About <i class="fa-solid fa-chevron-down text-[9px]"></i></button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-1 bg-white rounded-xl py-2 min-w-[200px] border">
+                            <a href="#about" class="block px-4 py-2.5 text-sm hover:bg-cream">Our Story</a>
+                            <a href="#about" class="block px-4 py-2.5 text-sm hover:bg-cream">Mission & Vision</a>
+                            <a href="#about" class="block px-4 py-2.5 text-sm hover:bg-cream">Values</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-trigger relative">
+                        <button class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium flex items-center gap-1">Programs <i class="fa-solid fa-chevron-down text-[9px]"></i></button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-1 bg-white rounded-xl py-2 min-w-[220px] border">
+                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream">Peacebuilding</a>
+                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream">Humanitarian Assistance</a>
+                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream">Community Development</a>
+                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream">Youth Empowerment</a>
+                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream">Advocacy & Engagement</a>
+                        </div>
+                    </div>
+                    <a href="#impact" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium">Impact</a>
+                    <a href="#news" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium">News & Updates</a>
+                    <a href="#partners" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium">Partners</a>
+                    <a href="#contact" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium">Contact</a>
+                </div>
+                <div class="hidden lg:block">
+                    <a href="#volunteer" class="support-btn px-6 py-2.5 rounded-full text-sm shadow-lg transition-all duration-300">Volunteer <i class="fa-solid fa-hand-holding-heart ml-1.5 text-xs"></i></a>
+                </div>
+                <button id="mobileMenuBtn" class="lg:hidden z-50 text-white p-2"><i class="fa-solid fa-bars text-2xl"></i></button>
+            </div>
         </div>
-        <p>Architecture · Construction · Plumbing · Electrical</p>
-        <a href="contact.html" class="btn btn-primary">Start your project →</a>
-      </div>
-    </section>
+    </nav>
 
-    <!-- About Section (with team image) -->
-    <section class="section">
-      <div class="container about-grid">
-        <div class="about-image">
-          <img src="assets/homes.jpg" alt="Akin team">
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-40 bg-navy/98 backdrop-blur-xl flex flex-col pt-24 px-8 lg:hidden">
+        <div class="flex flex-col gap-1 overflow-y-auto max-h-[80vh]">
+            <a href="#" class="text-white text-lg py-3 border-b border-white/10 font-medium">Home</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-btn w-full flex items-center justify-between text-white text-lg py-3 border-b border-white/10 font-medium" onclick="toggleMobileDropdown(this)">About <i class="fa-solid fa-chevron-down text-xs"></i></button>
+                <div class="mobile-dropdown-menu pl-4 space-y-1">
+                    <a href="#about" class="block text-white/70 text-base py-2">Our Story</a>
+                    <a href="#about" class="block text-white/70 text-base py-2">Mission & Vision</a>
+                    <a href="#about" class="block text-white/70 text-base py-2">Values</a>
+                </div>
+            </div>
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-btn w-full flex items-center justify-between text-white text-lg py-3 border-b border-white/10 font-medium" onclick="toggleMobileDropdown(this)">Programs <i class="fa-solid fa-chevron-down text-xs"></i></button>
+                <div class="mobile-dropdown-menu pl-4 space-y-1">
+                    <a href="#programs" class="block text-white/70 text-base py-2">Peacebuilding</a>
+                    <a href="#programs" class="block text-white/70 text-base py-2">Humanitarian Assistance</a>
+                    <a href="#programs" class="block text-white/70 text-base py-2">Community Development</a>
+                    <a href="#programs" class="block text-white/70 text-base py-2">Youth Empowerment</a>
+                    <a href="#programs" class="block text-white/70 text-base py-2">Advocacy & Engagement</a>
+                </div>
+            </div>
+            <a href="#impact" class="text-white text-lg py-3 border-b border-white/10 font-medium">Impact</a>
+            <a href="#news" class="text-white text-lg py-3 border-b border-white/10 font-medium">News & Updates</a>
+            <a href="#partners" class="text-white text-lg py-3 border-b border-white/10 font-medium">Partners</a>
+            <a href="#contact" class="text-white text-lg py-3 border-b border-white/10 font-medium">Contact</a>
+            <a href="#volunteer" class="support-btn px-6 py-3 rounded-full text-center mt-6 text-lg shadow-lg">Volunteer <i class="fa-solid fa-hand-holding-heart ml-1.5"></i></a>
         </div>
-        <div class="about-text">
-          <h2 class="section-title"><span>About</span> Akin</h2>
-          <p><strong>Based in Juba, South Sudan,</strong> Akin Engineering delivers premium construction and design solutions. From concept to completion, we integrate architecture, civil works, plumbing, and electrical systems. Our team combines local expertise with global standards, ensuring every project is safe, sustainable, and stunning.</p>
-          <a href="about.html" class="btn btn-outline">Learn more →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Preview -->
-    <section class="section bg-light">
-      <div class="container">
-        <h2 class="section-title"><span>Our</span> services</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <i class="fas fa-drafting-compass"></i>
-            <h3>Architecture</h3>
-            <p>Residential, commercial, and industrial designs — from concept to construction drawings.</p>
-          </div>
-          <div class="service-card">
-            <i class="fas fa-hard-hat"></i>
-            <h3>Building & Construction</h3>
-            <p>General contracting, project management, site supervision, and quality control.</p>
-          </div>
-          <div class="service-card">
-            <i class="fas fa-bolt"></i>
-            <h3>Plumbing & Electrical</h3>
-            <p>Modern installations, smart automation, and renewable energy systems.</p>
-          </div>
-        </div>
-        <div class="center">
-          <a href="services.html" class="btn btn-primary">See our services →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title"><span>Why</span> choose us</h2>
-        <div class="features-grid">
-          <div class="feature"><i class="fas fa-calendar-alt"></i><h4>12+ years</h4><p>Proven track record across South Sudan</p></div>
-          <div class="feature"><i class="fas fa-users"></i><h4>In‑house experts</h4><p>Architects, engineers, technicians</p></div>
-          <div class="feature"><i class="fas fa-clock"></i><h4>On time delivery</h4><p>We respect deadlines & budgets</p></div>
-          <div class="feature"><i class="fas fa-leaf"></i><h4>Sustainable</h4><p>Eco‑friendly materials & energy design</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Preview -->
-    <section class="section bg-light">
-      <div class="container">
-        <h2 class="section-title"><span>Recent</span> projects</h2>
-        <div class="gallery-grid">
-          <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2070&auto=format&fit=crop');"></div>
-          <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=1965&auto=format&fit=crop');"></div>
-          <div class="gallery-item" style="background-image: url('assets/homes.jpg');"></div>
-        </div>
-        <div class="center">
-          <a href="gallery.html" class="btn btn-outline">See our work →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call To Action (same background) -->
-    <section class="cta-section" style="background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop');">
-      <div class="cta-overlay"></div>
-      <div class="container cta-content">
-        <h2>Ready to build something great?</h2>
-        <p>Contact our team today for a free consultation</p>
-        <a href="contact.html" class="btn btn-primary">Get in touch →</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <div class="footer-logo">AKIN ENGINEERING</div>
-        <p><i class="fas fa-map-marker-alt"></i> Hai Malakal, Juba, South Sudan</p>
-        <p><i class="fas fa-phone-alt"></i> 0981 260 947 | 0927 969 777</p>
-        <p><i class="fas fa-envelope"></i> info@akinengineering.com</p>
-      </div>
-      <div>
-        <h4>Quick links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html#architecture">Architecture</a></li>
-          <li><a href="services.html#construction">Construction</a></li>
-          <li><a href="services.html#plumbing">Plumbing</a></li>
-          <li><a href="services.html#electrical">Electrical</a></li>
-          <li><a href="services.html#finishing">Interior Finishing</a></li>
-        </ul>
-      </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2026 Akin Engineering — excellence built in South Sudan</p>
-    </div>
-  </footer>
 
-  <script src="script.js"></script>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center overflow-hidden bg-navy">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1920&q=80" alt="Community in South Sudan" class="w-full h-full object-cover filter brightness-90">
+            <div class="absolute inset-0 overlay-hero"></div>
+        </div>
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 pt-28 lg:pt-20 pb-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="reveal"><span class="inline-block text-gold text-xs lg:text-sm tracking-[0.25em] uppercase font-semibold border border-gold/40 rounded-full px-4 py-1.5">Youth-Led | Non-Profit | South Sudan</span></div>
+                    <h1 class="reveal reveal-delay-1 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.08]" style="text-shadow:0 6px 24px rgba(0,0,0,0.5);">
+                        Building Peace.<br>Empowering Youth.<br>
+                        <span class="text-gold italic font-medium">Transforming Communities.</span>
+                    </h1>
+                    <p class="reveal reveal-delay-2 text-white/90 text-base sm:text-lg max-w-lg leading-relaxed font-light" style="text-shadow:0 2px 12px rgba(0,0,0,0.4);">
+                        IDEA-South Sudan is a youth-led humanitarian and development organization committed to fostering peace, resilience, and sustainable development across South Sudan.
+                    </p>
+                    <div class="reveal reveal-delay-3 flex flex-wrap gap-4">
+                        <a href="#about" class="bg-gold text-navy font-semibold px-8 py-3.5 rounded-full text-sm lg:text-base hover:bg-gold-light shadow-xl inline-flex items-center gap-2">Discover Our Work <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                        <a href="#volunteer" class="border-2 border-white/50 text-white font-semibold px-8 py-3.5 rounded-full text-sm lg:text-base hover:bg-white hover:text-navy inline-flex items-center gap-2">Get Involved <i class="fa-solid fa-hand-holding-heart text-xs"></i></a>
+                    </div>
+                </div>
+                <div class="reveal reveal-delay-4 hidden lg:flex flex-col gap-6 items-end">
+                    <div class="float-gentle bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20"><div class="text-gold text-3xl font-display font-bold">5K+</div><div class="text-white/80 text-sm">People Reached</div></div>
+                    <div class="float-gentle-delay bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 ml-8"><div class="text-gold text-3xl font-display font-bold">30+</div><div class="text-white/80 text-sm">Community Activities</div></div>
+                    <div class="float-gentle bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 ml-4"><div class="text-gold text-3xl font-display font-bold">2</div><div class="text-white/80 text-sm">States Covered</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why We Exist -->
+    <section class="py-20 lg:py-28 bg-cream relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10"><div class="absolute top-10 right-10 w-72 h-72 bg-gold rounded-full blur-3xl"></div><div class="absolute bottom-10 left-10 w-96 h-96 bg-forest rounded-full blur-3xl"></div></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 reveal">
+                    <span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Our Purpose</span>
+                    <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy leading-tight">Why IDEA-South Sudan <span class="text-forest italic">Exists</span></h2>
+                    <p class="text-gray-600 text-lg leading-relaxed">We believe that lasting peace and development in South Sudan must be driven by its youth. IDEA-South Sudan provides a platform for young people to lead peacebuilding initiatives, deliver humanitarian support, and drive community transformation. Through inclusive dialogue, partnership, and action, we are building a more resilient and united society.</p>
+                    <a href="#programs" class="inline-flex items-center gap-2 bg-navy text-white font-semibold px-8 py-3.5 rounded-full hover:bg-navy-light shadow-lg">Explore Our Programs <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+                <div class="reveal reveal-delay-2 relative">
+                    <div class="img-reveal rounded-2xl overflow-hidden shadow-2xl"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80" alt="Youth peacebuilding" class="w-full h-[400px] lg:h-[500px] object-cover"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative reveal">
+                    <div class="img-reveal rounded-2xl overflow-hidden shadow-2xl"><img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80" alt="Community workers" class="w-full h-[400px] lg:h-[600px] object-cover"></div>
+                </div>
+                <div class="space-y-8">
+                    <div class="reveal"><span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Who We Are</span>
+                        <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Youth-Led <span class="text-forest italic">Humanitarian & Development</span></h2>
+                    </div>
+                    <p class="reveal reveal-delay-1 text-gray-600 text-lg">IDEA-South Sudan is a national, youth-led non-profit organization based in Bor Town, Jonglei State, with operations in Juba. We work across humanitarian, development, and peacebuilding sectors, bringing together young leaders, civil society, and community members to foster peace and sustainable development.</p>
+                    <div class="grid sm:grid-cols-3 gap-4 reveal reveal-delay-2">
+                        <div class="bg-cream rounded-xl p-5"><div class="w-10 h-10 bg-gold/15 rounded-lg flex items-center mb-3"><i class="fa-solid fa-bullseye text-gold"></i></div><h4 class="font-semibold text-navy text-sm">Mission</h4><p class="text-gray-500 text-xs">Empower youth and communities through peacebuilding, humanitarian assistance, and sustainable development.</p></div>
+                        <div class="bg-cream rounded-xl p-5"><div class="w-10 h-10 bg-forest/15 rounded-lg flex items-center mb-3"><i class="fa-solid fa-eye text-forest"></i></div><h4 class="font-semibold text-navy text-sm">Vision</h4><p class="text-gray-500 text-xs">A peaceful, resilient South Sudan where youth drive positive change.</p></div>
+                        <div class="bg-cream rounded-xl p-5"><div class="w-10 h-10 bg-navy/10 rounded-lg flex items-center mb-3"><i class="fa-solid fa-hand-holding-heart text-navy"></i></div><h4 class="font-semibold text-navy text-sm">Values</h4><p class="text-gray-500 text-xs">Integrity, Collaboration, Inclusivity, Youth Empowerment, Peace.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 lg:py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16 reveal"><span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Focus Areas</span><h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Our <span class="text-forest italic">Programs</span></h2></div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md reveal"><div class="h-52 bg-gradient-to-br from-blue-900 to-blue-700 relative"><div class="absolute bottom-4 left-4 text-white"><div class="w-9 h-9 bg-gold rounded-lg flex items-center mb-2"><i class="fa-solid fa-dove text-navy"></i></div><h3 class="font-display font-semibold text-lg">Peacebuilding</h3></div></div><div class="p-5"><p class="text-gray-500 text-sm">Promoting peaceful coexistence, dialogue, reconciliation, and conflict resolution.</p></div></div>
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-delay-1"><div class="h-52 bg-gradient-to-br from-red-800 to-red-600 relative"><div class="absolute bottom-4 left-4 text-white"><div class="w-9 h-9 bg-gold rounded-lg flex items-center mb-2"><i class="fa-solid fa-truck-medical text-navy"></i></div><h3 class="font-display font-semibold text-lg">Humanitarian Assistance</h3></div></div><div class="p-5"><p class="text-gray-500 text-sm">Providing emergency relief and support to communities affected by crisis and displacement.</p></div></div>
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-delay-2"><div class="h-52 bg-gradient-to-br from-teal-700 to-teal-500 relative"><div class="absolute bottom-4 left-4 text-white"><div class="w-9 h-9 bg-gold rounded-lg flex items-center mb-2"><i class="fa-solid fa-people-group text-navy"></i></div><h3 class="font-display font-semibold text-lg">Community Development</h3></div></div><div class="p-5"><p class="text-gray-500 text-sm">Strengthening local infrastructure, livelihoods, and social services.</p></div></div>
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md reveal"><div class="h-52 bg-gradient-to-br from-amber-600 to-gold relative"><div class="absolute bottom-4 left-4 text-white"><div class="w-9 h-9 bg-white rounded-lg flex items-center mb-2"><i class="fa-solid fa-star text-navy"></i></div><h3 class="font-display font-semibold text-lg">Youth Empowerment</h3></div></div><div class="p-5"><p class="text-gray-500 text-sm">Training, mentorship, and leadership opportunities for young South Sudanese.</p></div></div>
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-delay-1"><div class="h-52 bg-gradient-to-br from-purple-800 to-purple-600 relative"><div class="absolute bottom-4 left-4 text-white"><div class="w-9 h-9 bg-gold rounded-lg flex items-center mb-2"><i class="fa-solid fa-bullhorn text-navy"></i></div><h3 class="font-display font-semibold text-lg">Advocacy & Engagement</h3></div></div><div class="p-5"><p class="text-gray-500 text-sm">Advocating for youth rights, gender equality, and inclusive participation in governance.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="relative py-28 lg:py-36 overflow-hidden bg-navy">
+        <div class="absolute inset-0"><img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1920&q=80" class="w-full h-full object-cover filter brightness-75"><div class="absolute inset-0 overlay-impact"></div></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+            <div class="reveal mb-12"><span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Our Reach</span><h2 class="font-display text-4xl lg:text-5xl font-bold text-white mt-3">Creating <span class="text-gold italic">Measurable Impact</span></h2></div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="reveal reveal-delay-1"><div class="text-gold font-display text-5xl lg:text-6xl font-bold counter" data-target="5000">0</div><div class="text-white/80 text-lg">People Reached</div></div>
+                <div class="reveal reveal-delay-2"><div class="text-gold font-display text-5xl lg:text-6xl font-bold counter" data-target="30">0</div><div class="text-white/80 text-lg">Community Activities</div></div>
+                <div class="reveal reveal-delay-3"><div class="text-gold font-display text-5xl lg:text-6xl font-bold counter" data-target="2">0</div><div class="text-white/80 text-lg">States Covered</div></div>
+                <div class="reveal reveal-delay-4"><div class="text-gold font-display text-5xl lg:text-6xl font-bold counter" data-target="10">0</div><div class="text-white/80 text-lg">Active Partners</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Updates Section -->
+    <section id="news" class="py-20 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16 reveal"><span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Stay Connected</span><h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Latest News & <span class="text-forest italic">Updates</span></h2></div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="reveal bg-cream rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                    <div class="flex items-center gap-3 text-gold text-sm mb-3"><i class="fa-regular fa-calendar"></i> July 23, 2026</div>
+                    <h3 class="font-semibold text-navy text-lg mb-2">📰 Peacebuilding Coordination Meeting</h3>
+                    <p class="text-gray-500 text-sm">IDEA-South Sudan joined the Moral Orientation and Chaplaincy meeting organized by the National Ministry of Peace Building with UNDP support. The forum brought together CSOs, UNMISS, INGOs, and women associations to review peacebuilding initiatives and strengthen collaboration.</p>
+                    <a href="#" class="inline-flex items-center gap-1 text-forest font-semibold text-xs mt-4 hover:text-gold">Read More <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+                </div>
+                <div class="reveal reveal-delay-1 bg-cream rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                    <div class="flex items-center gap-3 text-gold text-sm mb-3"><i class="fa-regular fa-calendar"></i> July 20, 2026</div>
+                    <h3 class="font-semibold text-navy text-lg mb-2">📰 Community Dialogue in Bor</h3>
+                    <p class="text-gray-500 text-sm">Our team facilitated a community dialogue in Bor Town, bringing together youth, elders, and local authorities to discuss conflict prevention and social cohesion. The event emphasized the role of young people in early warning and mediation.</p>
+                    <a href="#" class="inline-flex items-center gap-1 text-forest font-semibold text-xs mt-4 hover:text-gold">Read More <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+                </div>
+                <div class="reveal reveal-delay-2 bg-cream rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-all">
+                    <div class="flex items-center gap-3 text-gold text-sm mb-3"><i class="fa-regular fa-calendar"></i> June 2026</div>
+                    <h3 class="font-semibold text-navy text-lg mb-2">📰 Youth Leadership Workshop Completed</h3>
+                    <p class="text-gray-500 text-sm">A three-day leadership training for 50 young leaders from Jonglei and Central Equatoria was successfully concluded, equipping participants with skills in advocacy, project management, and peace communication.</p>
+                    <a href="#" class="inline-flex items-center gap-1 text-forest font-semibold text-xs mt-4 hover:text-gold">Read More <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Carousel -->
+    <section id="partners" class="py-20 lg:py-32 bg-cream overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 mb-12 text-center reveal"><span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Collaboration</span><h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Our <span class="text-forest italic">Partners</span></h2></div>
+        <div class="partner-carousel-wrapper reveal">
+            <div class="partner-carousel-track py-4">
+                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-globe text-navy text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">UNDP</span></div></div>
+                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-handshake text-forest text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">UNMISS</span></div></div>
+                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-building-columns text-gold text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">Ministry of Peace Building</span></div></div>
+                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-users text-navy text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">CSO Network</span></div></div>
+                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-venus text-forest text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">Women Associations</span></div></div>
+                <!-- duplicates for loop -->
+                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-globe text-navy text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">UNDP</span></div></div>
+                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-handshake text-forest text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">UNMISS</span></div></div>
+                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-building-columns text-gold text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">Ministry of Peace Building</span></div></div>
+                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-users text-navy text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">CSO Network</span></div></div>
+                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-venus text-forest text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">Women Associations</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer CTA -->
+    <section id="volunteer" class="py-20 lg:py-28 bg-navy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-15"><div class="absolute top-0 right-0 w-96 h-96 bg-gold rounded-full blur-3xl"></div><div class="absolute bottom-0 left-0 w-72 h-72 bg-forest rounded-full blur-3xl"></div></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <div class="reveal">
+                <span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Get Involved</span>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mt-3 leading-tight">Join Us as a <span class="text-gold italic">Volunteer</span></h2>
+                <p class="text-white/70 mt-4 max-w-lg mx-auto text-lg leading-relaxed">Your time and talent can make a real difference. Volunteer with IDEA-South Sudan and help build peaceful, resilient communities.</p>
+                <a href="#contact" class="inline-flex items-center gap-2 bg-gold text-navy font-bold px-10 py-4 rounded-full mt-8 hover:bg-gold-light transition-all duration-300 shadow-2xl shadow-gold/30 text-lg pulse-gold">
+                    Sign Up to Volunteer <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 lg:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="space-y-8 reveal">
+                    <span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Get In Touch</span>
+                    <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy">Contact <span class="text-forest italic">Us</span></h2>
+                    <div class="space-y-5">
+                        <div class="flex gap-4"><div class="w-11 h-11 bg-gold/15 rounded-xl flex items-center justify-center"><i class="fa-solid fa-location-dot text-gold"></i></div><div><h4 class="font-semibold text-navy">Head Office</h4><p class="text-gray-500">Bor Town, Jonglei State, South Sudan</p><p class="text-gray-500 text-sm">(Operations also in Juba)</p></div></div>
+                        <div class="flex gap-4"><div class="w-11 h-11 bg-forest/15 rounded-xl flex items-center justify-center"><i class="fa-solid fa-envelope text-forest"></i></div><div><h4 class="font-semibold text-navy">Email</h4><p class="text-gray-500">info@idea-ss.com</p></div></div>
+                        <div class="flex gap-4"><div class="w-11 h-11 bg-navy/10 rounded-xl flex items-center justify-center"><i class="fa-solid fa-phone text-navy"></i></div><div><h4 class="font-semibold text-navy">Phone</h4><p class="text-gray-500">+211 915 088 344</p></div></div>
+                        <div class="flex gap-4"><div class="w-11 h-11 bg-gold/15 rounded-xl flex items-center justify-center"><i class="fa-solid fa-globe text-gold"></i></div><div><h4 class="font-semibold text-navy">Website</h4><p class="text-gray-500">www.idea-ss.org</p></div></div>
+                    </div>
+                </div>
+                <div class="reveal reveal-delay-2 bg-cream rounded-2xl p-6 sm:p-8 shadow-lg">
+                    <form class="space-y-5">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Name" class="w-full px-4 py-3 rounded-xl border bg-white">
+                            <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-xl border bg-white">
+                        </div>
+                        <textarea rows="4" placeholder="Message" class="w-full px-4 py-3 rounded-xl border bg-white"></textarea>
+                        <button type="submit" class="w-full bg-navy text-white font-semibold py-3.5 rounded-xl hover:bg-navy-light flex items-center justify-center gap-2">Send Message <i class="fa-solid fa-paper-plane text-xs"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white pt-20 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3"><div class="w-11 h-11 bg-gold rounded-lg flex items-center justify-center"><span class="font-display font-bold text-navy text-lg">IDEA</span></div><span class="font-display font-semibold text-xl">IDEA-South Sudan</span></div>
+                <p class="text-white/55 text-sm max-w-sm">Youth-led humanitarian and development organization fostering peace and resilience in South Sudan.</p>
+            </div>
+            <div><h4 class="font-semibold text-white mb-4 text-sm uppercase">Quick Links</h4><ul class="space-y-2.5 text-white/55 text-sm"><li><a href="#" class="hover:text-gold">Home</a></li><li><a href="#about" class="hover:text-gold">About</a></li><li><a href="#programs" class="hover:text-gold">Programs</a></li><li><a href="#impact" class="hover:text-gold">Impact</a></li><li><a href="#news" class="hover:text-gold">News & Updates</a></li><li><a href="#volunteer" class="hover:text-gold">Volunteer</a></li></ul></div>
+            <div><h4 class="font-semibold text-white mb-4 text-sm uppercase">Programs</h4><ul class="space-y-2.5 text-white/55 text-sm"><li><a href="#programs" class="hover:text-gold">Peacebuilding</a></li><li><a href="#programs" class="hover:text-gold">Humanitarian Assistance</a></li><li><a href="#programs" class="hover:text-gold">Community Development</a></li><li><a href="#programs" class="hover:text-gold">Youth Empowerment</a></li><li><a href="#programs" class="hover:text-gold">Advocacy & Engagement</a></li></ul></div>
+            <div><h4 class="font-semibold text-white mb-4 text-sm uppercase">Contact</h4><ul class="space-y-2.5 text-white/55 text-sm"><li class="flex gap-2"><i class="fa-solid fa-location-dot text-gold mt-0.5"></i> Bor Town, Jonglei State</li><li class="flex gap-2"><i class="fa-solid fa-envelope text-gold mt-0.5"></i> info@idea-ss.com</li><li class="flex gap-2"><i class="fa-solid fa-phone text-gold mt-0.5"></i> +211 915 088 344</li><li class="flex gap-2"><i class="fa-solid fa-globe text-gold mt-0.5"></i> www.idea-ss.org</li></ul></div>
+        </div>
+        <div class="border-t border-white/10 pt-6 text-center text-white/40 text-xs">&copy; 2026 IDEA-South Sudan. All rights reserved. A youth-led non-profit organization in South Sudan.</div>
+    </footer>
+
+    <!-- Logo image container style (same as before) -->
+    <style>
+        .logo-image-container {
+            width: 44px; height: 44px; border-radius: 12px; overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(255,255,255,0.1); backdrop-filter: blur(8px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .logo-image { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 12px; }
+        .logo-image-container:hover { transform: translateY(-1px); box-shadow: 0 8px 25px rgba(212,160,23,0.3); border-color: rgba(212,160,23,0.4); background: rgba(255,255,255,0.2); }
+    </style>
+
+    <script>
+        function toggleMobileDropdown(button) {
+            const menu = button.nextElementSibling;
+            document.querySelectorAll('.mobile-dropdown-menu.open').forEach(m => { if (m !== menu) m.classList.remove('open'); });
+            document.querySelectorAll('.mobile-dropdown-btn.open').forEach(b => { if (b !== button) b.classList.remove('open'); });
+            menu.classList.toggle('open');
+            button.classList.toggle('open');
+        }
+
+        (function() {
+            const mainNav = document.getElementById('mainNav');
+            function updateNav() {
+                const scrollY = window.scrollY;
+                const isMobile = window.innerWidth < 1024;
+                mainNav.style.top = (scrollY > 80 || isMobile) ? '0' : '37px';
+                mainNav.classList.toggle('glass-dark', scrollY > 80);
+            }
+            window.addEventListener('scroll', updateNav, { passive: true });
+            window.addEventListener('resize', updateNav);
+            updateNav();
+
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const icon = mobileMenuBtn.querySelector('i');
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-xmark');
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-xmark');
+                });
+            });
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
+            }, { rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+            document.querySelectorAll('.img-reveal').forEach(el => revealObserver.observe(el));
+
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const duration = 2000;
+                        const start = performance.now();
+                        function animate(now) {
+                            const progress = Math.min((now - start) / duration, 1);
+                            counter.textContent = Math.floor((1 - Math.pow(1 - progress, 3)) * target) + '+';
+                            if (progress < 1) requestAnimationFrame(animate);
+                            else counter.textContent = target + '+';
+                        }
+                        requestAnimationFrame(animate);
+                        counterObserver.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.5 });
+            document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - mainNav.offsetHeight - 20, behavior: 'smooth' });
+                    }
+                });
+            });
+
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const btn = form.querySelector('button[type="submit"]');
+                    btn.innerHTML = '<i class="fa-solid fa-check"></i> Message Sent!';
+                    btn.classList.add('bg-forest');
+                    setTimeout(() => { btn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane text-xs"></i>'; btn.classList.remove('bg-forest'); form.reset(); }, 2500);
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
