@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>IDEA-South Sudan | Youth-Led Humanitarian & Development Organization</title>
-    <meta name="description" content="IDEA-South Sudan is a youth-led, non-profit organization working on humanitarian, development, and peacebuilding initiatives in South Sudan.">
-    <meta name="keywords" content="IDEA-South Sudan, youth-led NGO, peacebuilding, development, humanitarian, Bor, Juba, South Sudan">
+    <title>IDEA-South Sudan | Enhancing Humanity · Humanitarian & Development</title>
+    <meta name="description" content="Initiative for Development and Emergency Action (IDEA-South Sudan) – a national non‑profit humanitarian and development organization founded in 2018, dedicated to sustainable development, emergency response, and community resilience in South Sudan.">
+    <meta name="keywords" content="IDEA-South Sudan, humanitarian, development, peacebuilding, WASH, livelihoods, South Sudan NGO, Bor, Juba, Jonglei">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com">
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -19,91 +19,317 @@
                     fontFamily: {
                         'display': ['"Playfair Display"', 'Georgia', 'serif'],
                         'body': ['Inter', 'system-ui', 'sans-serif'],
+                        'accent': ['Outfit', 'system-ui', 'sans-serif'],
                     },
                     colors: {
                         'navy': '#06283D',
                         'navy-light': '#0a3d5c',
+                        'navy-dark': '#041a28',
                         'forest': '#1B5E45',
                         'forest-light': '#247a5a',
                         'gold': '#D4A017',
                         'gold-light': '#e8b830',
+                        'gold-dark': '#b8860b',
                         'cream': '#fdfaf3',
+                        'cream-dark': '#f5efe0',
+                        'warm-gray': '#f7f5f0',
                     }
                 }
             }
         }
     </script>
     <style>
-        :root { --navy: #06283D; --forest: #1B5E45; --gold: #D4A017; }
-        * { scroll-behavior: smooth; }
-        body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; background-color: #ffffff; overflow-x: hidden; }
-        .font-display { font-family: 'Playfair Display', Georgia, serif; }
-
-        .card-hover { transition: transform 0.4s cubic-bezier(0.23,1,0.32,1), box-shadow 0.4s ease; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
-        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 30px 50px -12px rgba(6,40,61,0.2); }
-
-        .overlay-hero { background: linear-gradient(135deg, rgba(6,40,61,0.6) 0%, rgba(6,40,61,0.35) 30%, rgba(27,94,69,0.15) 65%, rgba(6,40,61,0.3) 100%); }
-        .overlay-impact { background: rgba(6,40,61,0.5); }
-
-        .dropdown-menu { opacity: 0; transform: translateY(12px); pointer-events: none; transition: 0.3s ease; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); }
-        .dropdown-trigger:hover .dropdown-menu, .dropdown-menu.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
-
-        @keyframes bounceDown { 0%,100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
-        .scroll-indicator { animation: bounceDown 2s infinite; }
-
-        @keyframes floatGentle { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-        .float-gentle { animation: floatGentle 5s infinite; }
-        .float-gentle-delay { animation: floatGentle 5s 2.5s infinite; }
-
-        @keyframes pulseGold { 0%,100% { box-shadow: 0 0 0 0 rgba(212,160,23,0.6); } 50% { box-shadow: 0 0 0 15px rgba(212,160,23,0); } }
-        .pulse-gold { animation: pulseGold 2.5s infinite; }
-
-        .mobile-menu { transform: translateX(100%); transition: 0.4s cubic-bezier(0.23,1,0.32,1); }
-        .mobile-menu.open { transform: translateX(0); }
-        .mobile-dropdown-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-        .mobile-dropdown-menu.open { max-height: 500px; }
-        .mobile-dropdown-btn i { transition: transform 0.3s; }
-        .mobile-dropdown-btn.open i { transform: rotate(180deg); }
-
-        .partner-carousel-wrapper { overflow: hidden; mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%); }
-        .partner-carousel-track { display: flex; width: max-content; animation: infiniteScroll 35s linear infinite; }
-        .partner-carousel-track:hover { animation-play-state: paused; }
-        @keyframes infiniteScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.23,1,0.32,1), transform 0.8s cubic-bezier(0.23,1,0.32,1); }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
-        .reveal-delay-1 { transition-delay: 0.1s; }
-        .reveal-delay-2 { transition-delay: 0.2s; }
-        .reveal-delay-3 { transition-delay: 0.3s; }
-        .reveal-delay-4 { transition-delay: 0.4s; }
-        .img-reveal { clip-path: inset(0 100% 0 0); transition: clip-path 1.2s cubic-bezier(0.23,1,0.32,1); }
-        .img-reveal.visible { clip-path: inset(0 0% 0 0); }
-
-        @media (max-width: 767px) {
-            .img-reveal { clip-path: inset(0 0% 0 0) !important; opacity: 1 !important; transform: none !important; }
+        :root {
+            --navy: #06283D;
+            --forest: #1B5E45;
+            --gold: #D4A017;
+            --gold-light: #e8b830;
+            --cream: #fdfaf3;
         }
-
-        .glass { background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.4); }
-        .glass-dark { background: rgba(6,40,61,0.75); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1); }
-
-        .support-btn { background: linear-gradient(135deg, #D4A017, #e8b830); color: #06283D; font-weight: 700; }
-        .support-btn:hover { background: linear-gradient(135deg, #e8b830, #D4A017); transform: translateY(-1px); box-shadow: 0 10px 20px rgba(212,160,23,0.4); }
+        * {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+        .font-display {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .font-accent {
+            font-family: 'Outfit', system-ui, sans-serif;
+        }
+        .card-hover {
+            transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.45s ease;
+            box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.08);
+        }
+        .card-hover:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px -14px rgba(6, 40, 61, 0.28);
+        }
+        .overlay-hero {
+            background: linear-gradient(160deg, rgba(6, 40, 61, 0.72) 0%, rgba(6, 40, 61, 0.38) 30%, rgba(27, 94, 69, 0.15) 55%, rgba(6, 40, 61, 0.35) 80%, rgba(4, 26, 40, 0.55) 100%);
+        }
+        .dropdown-menu {
+            opacity: 0;
+            transform: translateY(14px);
+            pointer-events: none;
+            transition: 0.32s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 28px 55px -14px rgba(0, 0, 0, 0.22);
+        }
+        .dropdown-trigger:hover .dropdown-menu,
+        .dropdown-menu.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        @keyframes bounceDown {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(12px);
+            }
+        }
+        .scroll-indicator {
+            animation: bounceDown 2.2s infinite;
+        }
+        @keyframes floatGentle {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-14px);
+            }
+        }
+        .float-gentle {
+            animation: floatGentle 5.5s infinite;
+        }
+        .float-gentle-delay {
+            animation: floatGentle 5.5s 2.75s infinite;
+        }
+        @keyframes pulseGold {
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(212, 160, 23, 0.55);
+            }
+            50% {
+                box-shadow: 0 0 0 22px rgba(212, 160, 23, 0);
+            }
+        }
+        .pulse-gold {
+            animation: pulseGold 3s infinite;
+        }
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        .mobile-dropdown-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s ease;
+        }
+        .mobile-dropdown-menu.open {
+            max-height: 700px;
+        }
+        .mobile-dropdown-btn i {
+            transition: transform 0.3s;
+        }
+        .mobile-dropdown-btn.open i {
+            transform: rotate(180deg);
+        }
+        .partner-carousel-wrapper {
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+        }
+        .partner-carousel-track {
+            display: flex;
+            width: max-content;
+            animation: infiniteScroll 45s linear infinite;
+        }
+        .partner-carousel-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes infiniteScroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.85s cubic-bezier(0.23, 1, 0.32, 1), transform 0.85s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 {
+            transition-delay: 0.12s;
+        }
+        .reveal-delay-2 {
+            transition-delay: 0.24s;
+        }
+        .reveal-delay-3 {
+            transition-delay: 0.36s;
+        }
+        .reveal-delay-4 {
+            transition-delay: 0.48s;
+        }
+        .reveal-delay-5 {
+            transition-delay: 0.6s;
+        }
+        .img-reveal {
+            clip-path: inset(0 100% 0 0);
+            transition: clip-path 1.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .img-reveal.visible {
+            clip-path: inset(0 0% 0 0);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .glass-dark {
+            background: rgba(6, 40, 61, 0.82);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .support-btn {
+            background: linear-gradient(135deg, #D4A017, #e8b830);
+            color: #06283D;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 6px 20px rgba(212, 160, 23, 0.3);
+        }
+        .support-btn:hover {
+            background: linear-gradient(135deg, #e8b830, #f0c040);
+            transform: translateY(-3px);
+            box-shadow: 0 16px 32px rgba(212, 160, 23, 0.5);
+        }
+        .card-project {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        .card-project:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 48px rgba(6, 40, 61, 0.18);
+            border-color: rgba(212, 160, 23, 0.25);
+        }
+        .logo-svg-container {
+            width: 46px;
+            height: 46px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #06283D 0%, #0a3d5c 100%);
+            box-shadow: 0 6px 22px rgba(6, 40, 61, 0.35);
+            transition: all 0.35s ease;
+            border: 2px solid rgba(212, 160, 23, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+        .logo-svg-container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(212, 160, 23, 0.2) 0%, transparent 60%);
+            border-radius: 13px;
+        }
+        .logo-svg-container:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(212, 160, 23, 0.4);
+            border-color: rgba(212, 160, 23, 0.6);
+        }
+        .logo-svg-container svg {
+            position: relative;
+            z-index: 1;
+        }
+        .partner-logo-card {
+            background: white;
+            border-radius: 18px;
+            padding: 1.5rem 1.8rem;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+            transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            cursor: default;
+        }
+        .partner-logo-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(6, 40, 61, 0.14);
+            border-color: rgba(212, 160, 23, 0.3);
+        }
+        .section-accent-line {
+            width: 50px;
+            height: 4px;
+            background: linear-gradient(90deg, #D4A017, #e8b830);
+            border-radius: 2px;
+            display: inline-block;
+        }
+        .prog-card-wash {
+            background: linear-gradient(160deg, #1e5a8a 0%, #0d9488 100%);
+        }
+        .prog-card-fsl {
+            background: linear-gradient(160deg, #b45309 0%, #d97706 100%);
+        }
+        .prog-card-env {
+            background: linear-gradient(160deg, #166534 0%, #059669 100%);
+        }
+        .prog-card-peace {
+            background: linear-gradient(160deg, #3730a3 0%, #6366f1 100%);
+        }
+        .prog-card-disability {
+            background: linear-gradient(160deg, #7c3aed 0%, #a855f7 100%);
+        }
+        .prog-card-protection {
+            background: linear-gradient(160deg, #be123c 0%, #f43f5e 100%);
+        }
+        .prog-card-edu {
+            background: linear-gradient(160deg, #0369a1 0%, #14b8a6 100%);
+        }
+        .prog-card-shelter {
+            background: linear-gradient(160deg, #57534e 0%, #78716c 100%);
+        }
+        .prog-card-health {
+            background: linear-gradient(160deg, #9f1239 0%, #e11d48 100%);
+        }
     </style>
 </head>
 <body class="text-gray-800 bg-white">
 
     <!-- Top Bar -->
-    <div class="hidden lg:block bg-navy text-white/85 text-xs py-2.5 px-6 z-50 relative">
-        <div class="max-w-7xl mx-auto flex justify-between">
+    <div class="hidden lg:block bg-navy text-white/80 text-xs py-2.5 px-6 z-50 relative">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-6">
-                <a href="tel:+211915088344" class="hover:text-gold flex items-center gap-2"><i class="fa-solid fa-phone text-[10px] text-gold"></i> +211 915 088 344</a>
-                <span class="text-white/25">|</span>
-                <a href="mailto:info@idea-ss.com" class="hover:text-gold flex items-center gap-2"><i class="fa-solid fa-envelope text-[10px] text-gold"></i> info@idea-ss.com</a>
+                <a href="tel:+211915088344" class="hover:text-gold-light flex items-center gap-2 transition-colors"><i class="fa-solid fa-phone text-[10px] text-gold"></i> +211 915 088 344</a>
+                <span class="text-white/20">|</span>
+                <a href="mailto:info@idea-ss.org" class="hover:text-gold-light flex items-center gap-2 transition-colors"><i class="fa-solid fa-envelope text-[10px] text-gold"></i> info@idea-ss.org</a>
             </div>
             <div class="flex items-center gap-5">
-                <a href="#volunteer" class="hover:text-gold">Volunteer</a>
-                <a href="#contact" class="hover:text-gold">Contact</a>
-                <a href="#donate" class="bg-gold text-navy font-semibold px-5 py-2 rounded-full pulse-gold">Donate Now <i class="fa-solid fa-heart ml-1.5"></i></a>
+                <a href="#volunteer" class="hover:text-gold-light transition-colors">Volunteer</a>
+                <a href="#contact" class="hover:text-gold-light transition-colors">Contact</a>
+                <a href="#volunteer" class="bg-gold text-navy font-semibold px-5 py-2 rounded-full pulse-gold text-xs tracking-wide">Donate Now <i class="fa-solid fa-heart ml-1.5"></i></a>
             </div>
         </div>
     </div>
@@ -112,233 +338,720 @@
     <nav id="mainNav" class="fixed top-0 lg:top-[37px] w-full z-40 transition-all duration-500">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between py-4">
-                <a href="#" class="flex items-center gap-3 z-50">
-                    <div class="logo-image-container">
-                        <img src="assets/idea-logo.jpg" alt="IDEA-South Sudan Logo" class="logo-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=font-display font-bold text-navy text-lg>IDEA</span>'; this.parentElement.style.background='#D4A017'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+                <a href="#" class="flex items-center gap-3 z-50 group">
+                    <div class="logo-svg-container">
+                        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="36" height="36" rx="8" fill="none" stroke="#D4A017" stroke-width="1.8"/>
+                            <text x="20" y="19" text-anchor="middle" dominant-baseline="middle" fill="#D4A017" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="16" letter-spacing="1">IDEA</text>
+                            <circle cx="32" cy="9" r="3.5" fill="#e8b830" opacity="0.9"/>
+                            <line x1="10" y1="28" x2="30" y2="28" stroke="#D4A017" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+                        </svg>
                     </div>
                     <div class="hidden sm:block">
-                        <span class="font-display font-semibold text-white text-lg leading-tight block">IDEA-South Sudan</span>
-                        <span class="text-white/70 text-[10px] tracking-widest uppercase">Youth-Led Humanitarian & Development</span>
+                        <span class="font-display font-semibold text-white text-lg leading-tight block group-hover:text-gold-light transition-colors">IDEA-South Sudan</span>
+                        <span class="text-white/65 text-[10px] tracking-widest uppercase font-accent">Enhancing Humanity</span>
                     </div>
                 </a>
                 <div class="hidden lg:flex items-center gap-1">
-                    <a href="#" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">Home</a>
                     <div class="dropdown-trigger relative">
-                        <button class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium flex items-center gap-1">About <i class="fa-solid fa-chevron-down text-[9px]"></i></button>
-                        <div class="dropdown-menu absolute top-full left-0 mt-1 bg-white rounded-xl py-2 min-w-[200px] border">
-                            <a href="#about" class="block px-4 py-2.5 text-sm hover:bg-cream">Our Story</a>
-                            <a href="#about" class="block px-4 py-2.5 text-sm hover:bg-cream">Mission & Vision</a>
-                            <a href="#about" class="block px-4 py-2.5 text-sm hover:bg-cream">Values</a>
+                        <button class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium flex items-center gap-1 transition-colors">About <i class="fa-solid fa-chevron-down text-[9px]"></i></button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-1 bg-white rounded-xl py-2 min-w-[210px] border border-gray-100">
+                            <a href="#about" class="block px-4 py-2.5 text-sm hover:bg-cream rounded-lg mx-1 transition-colors font-medium">Our Story</a>
+                            <a href="#about" class="block px-4 py-2.5 text-sm hover:bg-cream rounded-lg mx-1 transition-colors">Mission & Vision</a>
+                            <a href="#about" class="block px-4 py-2.5 text-sm hover:bg-cream rounded-lg mx-1 transition-colors">Core Values</a>
+                            <a href="#objectives" class="block px-4 py-2.5 text-sm hover:bg-cream rounded-lg mx-1 transition-colors">Strategic Objectives</a>
                         </div>
                     </div>
                     <div class="dropdown-trigger relative">
-                        <button class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium flex items-center gap-1">Programs <i class="fa-solid fa-chevron-down text-[9px]"></i></button>
-                        <div class="dropdown-menu absolute top-full left-0 mt-1 bg-white rounded-xl py-2 min-w-[220px] border">
-                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream">Peacebuilding</a>
-                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream">Humanitarian Assistance</a>
-                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream">Community Development</a>
-                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream">Youth Empowerment</a>
-                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream">Advocacy & Engagement</a>
+                        <button class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium flex items-center gap-1 transition-colors">Programs <i class="fa-solid fa-chevron-down text-[9px]"></i></button>
+                        <div class="dropdown-menu absolute top-full left-0 mt-1 bg-white rounded-xl py-2 min-w-[260px] border border-gray-100">
+                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream rounded-lg mx-1 transition-colors font-medium">WASH</a>
+                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream rounded-lg mx-1 transition-colors">Food Security & Livelihoods</a>
+                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream rounded-lg mx-1 transition-colors">Health & Nutrition</a>
+                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream rounded-lg mx-1 transition-colors">Shelter / NFI</a>
+                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream rounded-lg mx-1 transition-colors">Education</a>
+                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream rounded-lg mx-1 transition-colors">Peacebuilding</a>
+                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream rounded-lg mx-1 transition-colors">Protection & Child Rights</a>
+                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream rounded-lg mx-1 transition-colors">Disability Inclusion</a>
+                            <a href="#programs" class="block px-4 py-2.5 text-sm hover:bg-cream rounded-lg mx-1 transition-colors">Environment & Wildlife</a>
                         </div>
                     </div>
-                    <a href="#impact" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium">Impact</a>
-                    <a href="#news" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium">News & Updates</a>
-                    <a href="#partners" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium">Partners</a>
-                    <a href="#contact" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="#projects" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">Track Record</a>
+                    <a href="#memberships" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">Networks</a>
+                    <a href="#partners" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">Partners</a>
+                     <a href="#impact" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">Impact</a>
+                     <a href="#news" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">News & update</a>
+                    <a href="#contact" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">Contact</a>
                 </div>
                 <div class="hidden lg:block">
-                    <a href="#volunteer" class="support-btn px-6 py-2.5 rounded-full text-sm shadow-lg transition-all duration-300">Volunteer <i class="fa-solid fa-hand-holding-heart ml-1.5 text-xs"></i></a>
+                    <a href="#volunteer" class="support-btn px-6 py-2.5 rounded-full text-sm shadow-lg transition-all duration-300 inline-flex items-center gap-1.5">Volunteer <i class="fa-solid fa-hand-holding-heart text-xs"></i></a>
                 </div>
-                <button id="mobileMenuBtn" class="lg:hidden z-50 text-white p-2"><i class="fa-solid fa-bars text-2xl"></i></button>
+                <button id="mobileMenuBtn" class="lg:hidden z-50 text-white p-2" aria-label="Toggle menu"><i class="fa-solid fa-bars text-2xl"></i></button>
             </div>
         </div>
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-40 bg-navy/98 backdrop-blur-xl flex flex-col pt-24 px-8 lg:hidden">
-        <div class="flex flex-col gap-1 overflow-y-auto max-h-[80vh]">
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-40 bg-navy/97 backdrop-blur-xl flex flex-col pt-24 px-8 lg:hidden">
+        <div class="flex flex-col gap-1 overflow-y-auto max-h-[80vh] pb-8">
             <a href="#" class="text-white text-lg py-3 border-b border-white/10 font-medium">Home</a>
             <div class="mobile-dropdown">
                 <button class="mobile-dropdown-btn w-full flex items-center justify-between text-white text-lg py-3 border-b border-white/10 font-medium" onclick="toggleMobileDropdown(this)">About <i class="fa-solid fa-chevron-down text-xs"></i></button>
                 <div class="mobile-dropdown-menu pl-4 space-y-1">
                     <a href="#about" class="block text-white/70 text-base py-2">Our Story</a>
                     <a href="#about" class="block text-white/70 text-base py-2">Mission & Vision</a>
-                    <a href="#about" class="block text-white/70 text-base py-2">Values</a>
+                    <a href="#about" class="block text-white/70 text-base py-2">Core Values</a>
+                    <a href="#objectives" class="block text-white/70 text-base py-2">Strategic Objectives</a>
                 </div>
             </div>
             <div class="mobile-dropdown">
                 <button class="mobile-dropdown-btn w-full flex items-center justify-between text-white text-lg py-3 border-b border-white/10 font-medium" onclick="toggleMobileDropdown(this)">Programs <i class="fa-solid fa-chevron-down text-xs"></i></button>
                 <div class="mobile-dropdown-menu pl-4 space-y-1">
+                    <a href="#programs" class="block text-white/70 text-base py-2">WASH</a>
+                    <a href="#programs" class="block text-white/70 text-base py-2">Food Security & Livelihoods</a>
+                    <a href="#programs" class="block text-white/70 text-base py-2">Health & Nutrition</a>
+                    <a href="#programs" class="block text-white/70 text-base py-2">Shelter / NFI</a>
+                    <a href="#programs" class="block text-white/70 text-base py-2">Education</a>
                     <a href="#programs" class="block text-white/70 text-base py-2">Peacebuilding</a>
-                    <a href="#programs" class="block text-white/70 text-base py-2">Humanitarian Assistance</a>
-                    <a href="#programs" class="block text-white/70 text-base py-2">Community Development</a>
-                    <a href="#programs" class="block text-white/70 text-base py-2">Youth Empowerment</a>
-                    <a href="#programs" class="block text-white/70 text-base py-2">Advocacy & Engagement</a>
+                    <a href="#programs" class="block text-white/70 text-base py-2">Protection & Child Rights</a>
+                    <a href="#programs" class="block text-white/70 text-base py-2">Disability Inclusion</a>
+                    <a href="#programs" class="block text-white/70 text-base py-2">Environment & Wildlife</a>
                 </div>
             </div>
-            <a href="#impact" class="text-white text-lg py-3 border-b border-white/10 font-medium">Impact</a>
-            <a href="#news" class="text-white text-lg py-3 border-b border-white/10 font-medium">News & Updates</a>
+            <a href="#projects" class="text-white text-lg py-3 border-b border-white/10 font-medium">Track Record</a>
+            <a href="#memberships" class="text-white text-lg py-3 border-b border-white/10 font-medium">Networks</a>
             <a href="#partners" class="text-white text-lg py-3 border-b border-white/10 font-medium">Partners</a>
+            <a href="#impact" class="text-white text-lg py-3 border-b border-white/10 font-medium">Impact</a>
+            <a href="#news" class="text-white text-lg py-3 border-b border-white/10 font-medium">News & Update</a>
             <a href="#contact" class="text-white text-lg py-3 border-b border-white/10 font-medium">Contact</a>
-            <a href="#volunteer" class="support-btn px-6 py-3 rounded-full text-center mt-6 text-lg shadow-lg">Volunteer <i class="fa-solid fa-hand-holding-heart ml-1.5"></i></a>
+            <a href="#volunteer" class="support-btn px-6 py-3 rounded-full text-center mt-6 text-lg shadow-lg">Volunteer <i class="fa-solid fa-hand-holding-heart ml-1.5 text-xs"></i></a>
         </div>
     </div>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center overflow-hidden bg-navy">
         <div class="absolute inset-0 z-0">
-            <img src="assets/idea1.jpg" alt="Community in South Sudan" class="w-full h-full object-cover filter brightness-90">
+            <img src="assets/idea1.jpg" alt="Community resilience South Sudan" class="w-full h-full object-cover filter brightness-90 scale-105" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(160deg, #06283D 0%, #0a3d5c 40%, #1B5E45 100%)';">
             <div class="absolute inset-0 overlay-hero"></div>
         </div>
+        <div class="absolute top-20 right-10 w-64 h-64 bg-gold/8 rounded-full blur-4xl z-0"></div>
+        <div class="absolute bottom-20 left-10 w-80 h-80 bg-forest/10 rounded-full blur-4xl z-0"></div>
         <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 pt-28 lg:pt-20 pb-20">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8">
-                    <div class="reveal"><span class="inline-block text-gold text-xs lg:text-sm tracking-[0.25em] uppercase font-semibold border border-gold/40 rounded-full px-4 py-1.5">Youth-Led | Non-Profit | South Sudan</span></div>
-                    <h1 class="reveal reveal-delay-1 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.08]" style="text-shadow:0 6px 24px rgba(0,0,0,0.5);">
-                        Building Peace.<br>Empowering Youth.<br>
-                        <span class="text-gold italic font-medium">Transforming Communities.</span>
+                    <div class="reveal">
+                        <span class="inline-block text-gold text-xs lg:text-sm tracking-[0.28em] uppercase font-semibold border border-gold/35 rounded-full px-5 py-2 font-accent backdrop-blur-sm">National NGO · Est. 2018</span>
+                    </div>
+                    <h1 class="reveal reveal-delay-1 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.06]" style="text-shadow:0 8px 30px rgba(0,0,0,0.55);">
+                        Enhancing Humanity.<br>Empowering Communities.<br>
+                        <span class="text-gold italic font-medium">Sustainable Resilience.</span>
                     </h1>
-                    <p class="reveal reveal-delay-2 text-white/90 text-base sm:text-lg max-w-lg leading-relaxed font-light" style="text-shadow:0 2px 12px rgba(0,0,0,0.4);">
-                        IDEA-South Sudan is a youth-led humanitarian and development organization committed to fostering peace, resilience, and sustainable development across South Sudan.
+                    <p class="reveal reveal-delay-2 text-white/85 text-base sm:text-lg max-w-lg leading-relaxed font-light" style="text-shadow:0 2px 14px rgba(0,0,0,0.45);">
+                        Initiative for Development and Emergency Action (IDEA-SS) — a national non‑profit humanitarian and development organization delivering integrated programmes across WASH, livelihoods, health, education, protection, and peacebuilding for the most vulnerable in hard‑to‑reach areas of South Sudan.
                     </p>
                     <div class="reveal reveal-delay-3 flex flex-wrap gap-4">
-                        <a href="#about" class="bg-gold text-navy font-semibold px-8 py-3.5 rounded-full text-sm lg:text-base hover:bg-gold-light shadow-xl inline-flex items-center gap-2">Discover Our Work <i class="fa-solid fa-arrow-right text-xs"></i></a>
-                        <a href="#volunteer" class="border-2 border-white/50 text-white font-semibold px-8 py-3.5 rounded-full text-sm lg:text-base hover:bg-white hover:text-navy inline-flex items-center gap-2">Get Involved <i class="fa-solid fa-hand-holding-heart text-xs"></i></a>
+                        <a href="#about" class="bg-gold text-navy font-semibold px-8 py-3.5 rounded-full text-sm lg:text-base hover:bg-gold-light shadow-2xl shadow-gold/25 inline-flex items-center gap-2 transition-all duration-300 font-accent">Our Mission <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                        <a href="#volunteer" class="border-2 border-white/45 text-white font-semibold px-8 py-3.5 rounded-full text-sm lg:text-base hover:bg-white hover:text-navy inline-flex items-center gap-2 transition-all duration-300 font-accent backdrop-blur-sm">Get Involved <i class="fa-solid fa-hand-holding-heart text-xs"></i></a>
                     </div>
                 </div>
                 <div class="reveal reveal-delay-4 hidden lg:flex flex-col gap-6 items-end">
-                    <div class="float-gentle bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20"><div class="text-gold text-3xl font-display font-bold">5K+</div><div class="text-white/80 text-sm">People Reached</div></div>
-                    <div class="float-gentle-delay bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 ml-8"><div class="text-gold text-3xl font-display font-bold">30+</div><div class="text-white/80 text-sm">Community Activities</div></div>
-                    <div class="float-gentle bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 ml-4"><div class="text-gold text-3xl font-display font-bold">2</div><div class="text-white/80 text-sm">States Covered</div></div>
+                    <div class="float-gentle bg-white/8 backdrop-blur-2xl rounded-2xl p-6 border border-white/15 shadow-2xl">
+                        <div class="text-gold text-3xl font-display font-bold">10+</div>
+                        <div class="text-white/75 text-sm font-accent tracking-wide">Program Pillars</div>
+                    </div>
+                    <div class="float-gentle-delay bg-white/8 backdrop-blur-2xl rounded-2xl p-6 border border-white/15 shadow-2xl ml-8">
+                        <div class="text-gold text-3xl font-display font-bold">6</div>
+                        <div class="text-white/75 text-sm font-accent tracking-wide">National Clusters</div>
+                    </div>
+                    <div class="float-gentle bg-white/8 backdrop-blur-2xl rounded-2xl p-6 border border-white/15 shadow-2xl ml-4">
+                        <div class="text-gold text-3xl font-display font-bold">8+</div>
+                        <div class="text-white/75 text-sm font-accent tracking-wide">States & Counties</div>
+                    </div>
                 </div>
+            </div>
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator z-10 hidden lg:block">
+                <a href="#about" class="text-white/50 hover:text-gold transition-colors"><i class="fa-solid fa-chevron-down text-2xl"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Why We Exist -->
+    <!-- Background / Why We Exist -->
     <section class="py-20 lg:py-28 bg-cream relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10"><div class="absolute top-10 right-10 w-72 h-72 bg-gold rounded-full blur-3xl"></div><div class="absolute bottom-10 left-10 w-96 h-96 bg-forest rounded-full blur-3xl"></div></div>
+        <div class="absolute inset-0 opacity-8 pointer-events-none">
+            <div class="absolute top-10 right-10 w-80 h-80 bg-gold/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 left-10 w-96 h-96 bg-forest/15 rounded-full blur-3xl"></div>
+        </div>
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
                 <div class="space-y-8 reveal">
-                    <span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Our Purpose</span>
+                    <div>
+                        <span class="text-gold text-sm tracking-[0.22em] uppercase font-semibold font-accent">Our Background</span>
+                        <div class="section-accent-line mt-3"></div>
+                    </div>
                     <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy leading-tight">Why IDEA-South Sudan <span class="text-forest italic">Exists</span></h2>
-                    <p class="text-gray-600 text-lg leading-relaxed">We believe that lasting peace and development in South Sudan must be driven by its youth. IDEA-South Sudan provides a platform for young people to lead peacebuilding initiatives, deliver humanitarian support, and drive community transformation. Through inclusive dialogue, partnership, and action, we are building a more resilient and united society.</p>
-                    <a href="#programs" class="inline-flex items-center gap-2 bg-navy text-white font-semibold px-8 py-3.5 rounded-full hover:bg-navy-light shadow-lg">Explore Our Programs <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                    <p class="text-gray-600 text-lg leading-relaxed">Founded in 2018 and registered under the NGO Act 2016 with the Ministry of Humanitarian Affairs, Relief and Rehabilitation Commission, IDEA-SS works in partnership with communities, local and national government authorities, UN agencies, international NGOs, and civil society organizations. We design long‑term solutions to alleviate poverty and implement context‑sensitive, rights‑based programmes across South Sudan, promoting social cohesion and empowering communities in tackling the root causes of poverty.</p>
+                    <p class="text-gray-600 leading-relaxed">Our approach is grounded in <strong class="text-navy">community ownership, gender equality, protection mainstreaming, and accountability to affected populations (AAP)</strong>. We operate across Jonglei, GPAA, Lake State, Western Equatoria, Eastern Equatoria, Upper Nile, Ruweng Administrative Area, and Central Equatoria.</p>
+                    <a href="#programs" class="inline-flex items-center gap-2 bg-navy text-white font-semibold px-8 py-3.5 rounded-full hover:bg-navy-light shadow-xl transition-all duration-300 font-accent">Explore All Programs <i class="fa-solid fa-arrow-right text-xs"></i></a>
                 </div>
                 <div class="reveal reveal-delay-2 relative">
-                    <div class="img-reveal rounded-2xl overflow-hidden shadow-2xl"><img src="assets/idea2.jpg" alt="Youth peacebuilding" class="w-full h-[400px] lg:h-[500px] object-cover"></div>
+                    <div class="img-reveal rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5">
+                        <img src="assets/idea2.jpg" alt="Community mobilization" class="w-full h-[420px] lg:h-[520px] object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-[420px] lg:h-[520px] bg-gradient-to-br from-navy to-forest flex items-center justify-center\'><span class=\'text-white/30 font-display text-6xl\'>IDEA</span></div>';">
+                    </div>
+                    <div class="absolute -bottom-5 -left-5 bg-gold text-navy font-bold px-6 py-3 rounded-2xl shadow-xl font-accent text-sm tracking-wide">Since 2018 · Community First</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 lg:py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <!-- About / Mission & Vision + Core Values -->
+    <section id="about" class="py-20 lg:py-32 bg-white relative">
+        <div class="absolute top-0 right-0 w-72 h-72 bg-cream/60 rounded-full blur-3xl -z-0"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-14 items-center">
                 <div class="relative reveal">
-                    <div class="img-reveal rounded-2xl overflow-hidden shadow-2xl"><img src="assets/idea1.jpg" alt="Community workers" class="w-full h-[400px] lg:h-[600px] object-cover"></div>
+                    <div class="img-reveal rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5">
+                        <img src="assets/idea1.jpg" alt="IDEA-SS team" class="w-full h-[420px] lg:h-[600px] object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-[420px] lg:h-[600px] bg-gradient-to-br from-forest to-navy flex items-center justify-center\'><span class=\'text-white/25 font-display text-7xl\'>IDEA</span></div>';">
+                    </div>
+                    <div class="absolute -top-6 -right-6 w-20 h-20 bg-gold/20 rounded-full blur-xl"></div>
                 </div>
                 <div class="space-y-8">
-                    <div class="reveal"><span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Who We Are</span>
-                        <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Youth-Led <span class="text-forest italic">Humanitarian & Development</span></h2>
+                    <div class="reveal">
+                        <span class="text-gold text-sm tracking-[0.22em] uppercase font-semibold font-accent">Who We Are</span>
+                        <div class="section-accent-line mt-3"></div>
+                        <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Mission & <span class="text-forest italic">Vision</span></h2>
                     </div>
-                    <p class="reveal reveal-delay-1 text-gray-600 text-lg">IDEA-South Sudan is a national, youth-led non-profit organization based in Bor Town, Jonglei State, with operations in Juba. We work across humanitarian, development, and peacebuilding sectors, bringing together young leaders, civil society, and community members to foster peace and sustainable development.</p>
-                    <div class="grid sm:grid-cols-3 gap-4 reveal reveal-delay-2">
-                        <div class="bg-cream rounded-xl p-5"><div class="w-10 h-10 bg-gold/15 rounded-lg flex items-center mb-3"><i class="fa-solid fa-bullseye text-gold"></i></div><h4 class="font-semibold text-navy text-sm">Mission</h4><p class="text-gray-500 text-xs">Empower youth and communities through peacebuilding, humanitarian assistance, and sustainable development.</p></div>
-                        <div class="bg-cream rounded-xl p-5"><div class="w-10 h-10 bg-forest/15 rounded-lg flex items-center mb-3"><i class="fa-solid fa-eye text-forest"></i></div><h4 class="font-semibold text-navy text-sm">Vision</h4><p class="text-gray-500 text-xs">A peaceful, resilient South Sudan where youth drive positive change.</p></div>
-                        <div class="bg-cream rounded-xl p-5"><div class="w-10 h-10 bg-navy/10 rounded-lg flex items-center mb-3"><i class="fa-solid fa-hand-holding-heart text-navy"></i></div><h4 class="font-semibold text-navy text-sm">Values</h4><p class="text-gray-500 text-xs">Integrity, Collaboration, Inclusivity, Youth Empowerment, Peace.</p></div>
+                    <div class="space-y-5 reveal reveal-delay-1">
+                        <div class="bg-cream p-6 rounded-2xl border-l-[5px] border-gold shadow-sm hover:shadow-md transition-shadow">
+                            <h4 class="font-semibold text-navy flex items-center gap-2.5 text-lg"><i class="fa-solid fa-bullseye text-gold text-lg"></i> Our Mission</h4>
+                            <p class="text-gray-600 text-sm mt-2 leading-relaxed">To eradicate poverty in partnership with the communities for sustainable development by improving the living conditions of vulnerable population in hard‑to‑reach communities, socially and economically wellbeing and self‑reliance.</p>
+                        </div>
+                        <div class="bg-cream p-6 rounded-2xl border-l-[5px] border-forest shadow-sm hover:shadow-md transition-shadow">
+                            <h4 class="font-semibold text-navy flex items-center gap-2.5 text-lg"><i class="fa-solid fa-eye text-forest text-lg"></i> Our Vision</h4>
+                            <p class="text-gray-600 text-sm mt-2 leading-relaxed">Change the lives of most vulnerable communities through transforming their resourcefulness, made up of skillful development, stability in all areas of lives, and free from poverty, destitution and illiteracy, health, education, peace building, FSL, and gender inequalities issues in South Sudan.</p>
+                        </div>
                     </div>
+                    <div class="reveal reveal-delay-2">
+                        <h4 class="font-semibold text-navy mb-4 text-lg">Core Values</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-gold/8 text-navy px-5 py-2.5 rounded-full text-sm font-medium border border-gold/20 hover:bg-gold/15 transition-colors"><i class="fa-solid fa-heart text-gold mr-1.5 text-xs"></i> Humanity</span>
+                            <span class="bg-gold/8 text-navy px-5 py-2.5 rounded-full text-sm font-medium border border-gold/20 hover:bg-gold/15 transition-colors"><i class="fa-solid fa-balance-scale text-gold mr-1.5 text-xs"></i> Integrity</span>
+                            <span class="bg-gold/8 text-navy px-5 py-2.5 rounded-full text-sm font-medium border border-gold/20 hover:bg-gold/15 transition-colors"><i class="fa-solid fa-equals text-gold mr-1.5 text-xs"></i> Impartiality</span>
+                            <span class="bg-gold/8 text-navy px-5 py-2.5 rounded-full text-sm font-medium border border-gold/20 hover:bg-gold/15 transition-colors"><i class="fa-solid fa-people-group text-gold mr-1.5 text-xs"></i> Community Ownership</span>
+                            <span class="bg-gold/8 text-navy px-5 py-2.5 rounded-full text-sm font-medium border border-gold/20 hover:bg-gold/15 transition-colors"><i class="fa-solid fa-universal-access text-gold mr-1.5 text-xs"></i> Inclusivity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Objectives -->
+    <section id="objectives" class="py-20 lg:py-28 bg-navy relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-5xl"></div>
+            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-forest/6 rounded-full blur-5xl"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-14 reveal">
+                <span class="text-gold text-sm tracking-[0.22em] uppercase font-semibold font-accent">Our Direction</span>
+                <div class="section-accent-line mt-3 mx-auto"></div>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mt-3">Strategic <span class="text-gold italic">Objectives</span></h2>
+                <p class="text-white/60 mt-4 max-w-2xl mx-auto">IDEA-SS aims to engage in development programs and empowerment of the most vulnerable communities and marginalized in society to intervene for greater impact on women, men, boys, girls, elderly, and persons with disability.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="reveal bg-white/5 backdrop-blur-sm rounded-2xl p-7 border border-white/10 hover:border-gold/30 transition-all duration-400 hover:bg-white/8 group">
+                    <div class="w-10 h-10 bg-gold/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gold/30 transition-colors"><i class="fa-solid fa-wheat-awn text-gold"></i></div>
+                    <p class="text-white/85 text-sm leading-relaxed">Promote equitable access to <strong class="text-gold">food security and sustainable livelihoods</strong> through training and advocacy.</p>
+                </div>
+                <div class="reveal reveal-delay-1 bg-white/5 backdrop-blur-sm rounded-2xl p-7 border border-white/10 hover:border-gold/30 transition-all duration-400 hover:bg-white/8 group">
+                    <div class="w-10 h-10 bg-gold/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gold/30 transition-colors"><i class="fa-solid fa-dove text-gold"></i></div>
+                    <p class="text-white/85 text-sm leading-relaxed">Promote <strong class="text-gold">social cohesion, peace building and reconciliation</strong> amongst communities in South Sudan.</p>
+                </div>
+                <div class="reveal reveal-delay-2 bg-white/5 backdrop-blur-sm rounded-2xl p-7 border border-white/10 hover:border-gold/30 transition-all duration-400 hover:bg-white/8 group">
+                    <div class="w-10 h-10 bg-gold/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gold/30 transition-colors"><i class="fa-solid fa-droplet text-gold"></i></div>
+                    <p class="text-white/85 text-sm leading-relaxed">Provide access to <strong class="text-gold">Health, WASH services</strong> including potable water, sanitation and hygiene, and Nutrition services to the needy population.</p>
+                </div>
+                <div class="reveal bg-white/5 backdrop-blur-sm rounded-2xl p-7 border border-white/10 hover:border-gold/30 transition-all duration-400 hover:bg-white/8 group">
+                    <div class="w-10 h-10 bg-gold/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gold/30 transition-colors"><i class="fa-solid fa-school text-gold"></i></div>
+                    <p class="text-white/85 text-sm leading-relaxed">Promote <strong class="text-gold">education</strong> through training of teachers, advocacy and provision of learning materials in South Sudan.</p>
+                </div>
+                <div class="reveal reveal-delay-1 bg-white/5 backdrop-blur-sm rounded-2xl p-7 border border-white/10 hover:border-gold/30 transition-all duration-400 hover:bg-white/8 group">
+                    <div class="w-10 h-10 bg-gold/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gold/30 transition-colors"><i class="fa-solid fa-lightbulb text-gold"></i></div>
+                    <p class="text-white/85 text-sm leading-relaxed">Empower communities to advance and adopt <strong class="text-gold">new skills and knowledge</strong> through training to improve their economic capacities.</p>
+                </div>
+                <div class="reveal reveal-delay-2 bg-white/5 backdrop-blur-sm rounded-2xl p-7 border border-white/10 hover:border-gold/30 transition-all duration-400 hover:bg-white/8 group">
+                    <div class="w-10 h-10 bg-gold/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gold/30 transition-colors"><i class="fa-solid fa-gavel text-gold"></i></div>
+                    <p class="text-white/85 text-sm leading-relaxed">Provide <strong class="text-gold">human rights advocacy and education</strong> to communities and civil society stakeholders.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Programs Section -->
-    <section id="programs" class="py-20 lg:py-32 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="text-center mb-16 reveal"><span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Focus Areas</span><h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Our <span class="text-forest italic">Programs</span></h2></div>
+    <section id="programs" class="py-20 lg:py-32 bg-warm-gray relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold/3 rounded-full blur-5xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <span class="text-gold text-sm tracking-[0.22em] uppercase font-semibold font-accent">Integrated Pillars</span>
+                <div class="section-accent-line mt-3 mx-auto"></div>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Our <span class="text-forest italic">Programme Focus</span></h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto text-base">Multi‑sectoral, community‑centered interventions across ten interconnected pillars</p>
+            </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md reveal"><div class="h-52 bg-gradient-to-br from-blue-900 to-blue-700 relative"><div class="absolute bottom-4 left-4 text-white"><div class="w-9 h-9 bg-gold rounded-lg flex items-center mb-2"><i class="fa-solid fa-dove text-navy"></i></div><h3 class="font-display font-semibold text-lg">Peacebuilding</h3></div></div><div class="p-5"><p class="text-gray-500 text-sm">Promoting peaceful coexistence, dialogue, reconciliation, and conflict resolution.</p></div></div>
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-delay-1"><div class="h-52 bg-gradient-to-br from-red-800 to-red-600 relative"><div class="absolute bottom-4 left-4 text-white"><div class="w-9 h-9 bg-gold rounded-lg flex items-center mb-2"><i class="fa-solid fa-truck-medical text-navy"></i></div><h3 class="font-display font-semibold text-lg">Humanitarian Assistance</h3></div></div><div class="p-5"><p class="text-gray-500 text-sm">Providing emergency relief and support to communities affected by crisis and displacement.</p></div></div>
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-delay-2"><div class="h-52 bg-gradient-to-br from-teal-700 to-teal-500 relative"><div class="absolute bottom-4 left-4 text-white"><div class="w-9 h-9 bg-gold rounded-lg flex items-center mb-2"><i class="fa-solid fa-people-group text-navy"></i></div><h3 class="font-display font-semibold text-lg">Community Development</h3></div></div><div class="p-5"><p class="text-gray-500 text-sm">Strengthening local infrastructure, livelihoods, and social services.</p></div></div>
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md reveal"><div class="h-52 bg-gradient-to-br from-amber-600 to-gold relative"><div class="absolute bottom-4 left-4 text-white"><div class="w-9 h-9 bg-white rounded-lg flex items-center mb-2"><i class="fa-solid fa-star text-navy"></i></div><h3 class="font-display font-semibold text-lg">Youth Empowerment</h3></div></div><div class="p-5"><p class="text-gray-500 text-sm">Training, mentorship, and leadership opportunities for young South Sudanese.</p></div></div>
-                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-delay-1"><div class="h-52 bg-gradient-to-br from-purple-800 to-purple-600 relative"><div class="absolute bottom-4 left-4 text-white"><div class="w-9 h-9 bg-gold rounded-lg flex items-center mb-2"><i class="fa-solid fa-bullhorn text-navy"></i></div><h3 class="font-display font-semibold text-lg">Advocacy & Engagement</h3></div></div><div class="p-5"><p class="text-gray-500 text-sm">Advocating for youth rights, gender equality, and inclusive participation in governance.</p></div></div>
+                <!-- WASH -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden reveal group">
+                    <div class="h-48 prog-card-wash relative flex items-end p-5 overflow-hidden">
+                        <div class="absolute inset-0 bg-black/15 group-hover:bg-black/5 transition-colors"></div>
+                        <div class="relative z-10 text-white">
+                            <div class="w-11 h-11 bg-gold/90 rounded-xl flex items-center justify-center mb-3 shadow-lg"><i class="fa-solid fa-droplet text-navy text-lg"></i></div>
+                            <h3 class="font-display font-semibold text-xl">WASH</h3>
+                        </div>
+                        <div class="absolute top-3 right-3 text-white/20 text-5xl font-bold font-accent opacity-20">01</div>
+                    </div>
+                    <div class="p-5"><p class="text-gray-500 text-sm leading-relaxed">Hygiene education, home hygiene promoter training, safe food handling, clean drinking water promotion, and software components for sustainable hygiene practices. We use visual aids to deliver life‑saving messages to communities.</p></div>
+                </div>
+                <!-- Food Security & Livelihoods -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden reveal reveal-delay-1 group">
+                    <div class="h-48 prog-card-fsl relative flex items-end p-5 overflow-hidden">
+                        <div class="absolute inset-0 bg-black/15 group-hover:bg-black/5 transition-colors"></div>
+                        <div class="relative z-10 text-white">
+                            <div class="w-11 h-11 bg-gold/90 rounded-xl flex items-center justify-center mb-3 shadow-lg"><i class="fa-solid fa-wheat-awn text-navy text-lg"></i></div>
+                            <h3 class="font-display font-semibold text-xl">Food Security & Livelihoods</h3>
+                        </div>
+                        <div class="absolute top-3 right-3 text-white/20 text-5xl font-bold font-accent opacity-20">02</div>
+                    </div>
+                    <div class="p-5"><p class="text-gray-500 text-sm leading-relaxed">Strengthening rural community capacity for crop/livestock production, fishery groups, market linkages, asset creation (dykes, road rehabilitation), and cash‑for‑work. Community‑based financial services and improved food consumption to reduce malnutrition.</p></div>
+                </div>
+                <!-- Environment & Wildlife -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden reveal reveal-delay-2 group">
+                    <div class="h-48 prog-card-env relative flex items-end p-5 overflow-hidden">
+                        <div class="absolute inset-0 bg-black/15 group-hover:bg-black/5 transition-colors"></div>
+                        <div class="relative z-10 text-white">
+                            <div class="w-11 h-11 bg-gold/90 rounded-xl flex items-center justify-center mb-3 shadow-lg"><i class="fa-solid fa-tree text-navy text-lg"></i></div>
+                            <h3 class="font-display font-semibold text-xl">Environment & Wildlife</h3>
+                        </div>
+                        <div class="absolute top-3 right-3 text-white/20 text-5xl font-bold font-accent opacity-20">03</div>
+                    </div>
+                    <div class="p-5"><p class="text-gray-500 text-sm leading-relaxed">Integrated nexus approach focusing on three strategic pillars: Climate Resilience, Ecosystem Restoration, and Community‑Based Wildlife Conservation — recognizing climate change, environmental degradation, and wildlife loss as interconnected threats.</p></div>
+                </div>
+                <!-- Peacebuilding -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden reveal group">
+                    <div class="h-48 prog-card-peace relative flex items-end p-5 overflow-hidden">
+                        <div class="absolute inset-0 bg-black/15 group-hover:bg-black/5 transition-colors"></div>
+                        <div class="relative z-10 text-white">
+                            <div class="w-11 h-11 bg-gold/90 rounded-xl flex items-center justify-center mb-3 shadow-lg"><i class="fa-solid fa-dove text-navy text-lg"></i></div>
+                            <h3 class="font-display font-semibold text-xl">Peacebuilding</h3>
+                        </div>
+                        <div class="absolute top-3 right-3 text-white/20 text-5xl font-bold font-accent opacity-20">04</div>
+                    </div>
+                    <div class="p-5"><p class="text-gray-500 text-sm leading-relaxed">Building on existing peace structures for conflict resolution and mitigation. Conflict‑sensitive programming, youth peace education, and small income‑generating activities to engage youth in active production and reduce inter‑communal violence.</p></div>
+                </div>
+                <!-- Disability Inclusion -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden reveal reveal-delay-1 group">
+                    <div class="h-48 prog-card-disability relative flex items-end p-5 overflow-hidden">
+                        <div class="absolute inset-0 bg-black/15 group-hover:bg-black/5 transition-colors"></div>
+                        <div class="relative z-10 text-white">
+                            <div class="w-11 h-11 bg-gold/90 rounded-xl flex items-center justify-center mb-3 shadow-lg"><i class="fa-solid fa-wheelchair-move text-navy text-lg"></i></div>
+                            <h3 class="font-display font-semibold text-xl">Disability Inclusion</h3>
+                        </div>
+                        <div class="absolute top-3 right-3 text-white/20 text-5xl font-bold font-accent opacity-20">05</div>
+                    </div>
+                    <div class="p-5"><p class="text-gray-500 text-sm leading-relaxed">Rehabilitation services, mobility devices, access to education, economic reintegration through business entrepreneurship, psychosocial support, and systematic inclusion of persons with disabilities into livelihoods activities.</p></div>
+                </div>
+                <!-- Protection & Child Rights -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden reveal reveal-delay-2 group">
+                    <div class="h-48 prog-card-protection relative flex items-end p-5 overflow-hidden">
+                        <div class="absolute inset-0 bg-black/15 group-hover:bg-black/5 transition-colors"></div>
+                        <div class="relative z-10 text-white">
+                            <div class="w-11 h-11 bg-gold/90 rounded-xl flex items-center justify-center mb-3 shadow-lg"><i class="fa-solid fa-shield-haltered text-navy text-lg"></i></div>
+                            <h3 class="font-display font-semibold text-xl">Protection & Child Rights</h3>
+                        </div>
+                        <div class="absolute top-3 right-3 text-white/20 text-5xl font-bold font-accent opacity-20">06</div>
+                    </div>
+                    <div class="p-5"><p class="text-gray-500 text-sm leading-relaxed">SGBV prevention and response, community‑based protection, legal protection, child protection mainstreaming, and protection of persons with specific needs. Participatory approaches to understand root causes of protection violations.</p></div>
+                </div>
+                <!-- Education -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden reveal group">
+                    <div class="h-48 prog-card-edu relative flex items-end p-5 overflow-hidden">
+                        <div class="absolute inset-0 bg-black/15 group-hover:bg-black/5 transition-colors"></div>
+                        <div class="relative z-10 text-white">
+                            <div class="w-11 h-11 bg-gold/90 rounded-xl flex items-center justify-center mb-3 shadow-lg"><i class="fa-solid fa-school text-navy text-lg"></i></div>
+                            <h3 class="font-display font-semibold text-xl">Education</h3>
+                        </div>
+                        <div class="absolute top-3 right-3 text-white/20 text-5xl font-bold font-accent opacity-20">07</div>
+                    </div>
+                    <div class="p-5"><p class="text-gray-500 text-sm leading-relaxed">Informal and formal education for rural and urban settings. Teacher training, learning materials, village‑level adult education, pastoralist education packages, and equal access campaigns using mass media and community engagement.</p></div>
+                </div>
+                <!-- Shelter/NFI -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden reveal reveal-delay-1 group">
+                    <div class="h-48 prog-card-shelter relative flex items-end p-5 overflow-hidden">
+                        <div class="absolute inset-0 bg-black/15 group-hover:bg-black/5 transition-colors"></div>
+                        <div class="relative z-10 text-white">
+                            <div class="w-11 h-11 bg-gold/90 rounded-xl flex items-center justify-center mb-3 shadow-lg"><i class="fa-solid fa-house-chimney-crack text-navy text-lg"></i></div>
+                            <h3 class="font-display font-semibold text-xl">Shelter / NFI</h3>
+                        </div>
+                        <div class="absolute top-3 right-3 text-white/20 text-5xl font-bold font-accent opacity-20">08</div>
+                    </div>
+                    <div class="p-5"><p class="text-gray-500 text-sm leading-relaxed">Life‑saving NFI and emergency shelter materials for conflict‑displaced and returning populations. Vulnerability‑based beneficiary selection prioritizing PWDs, chronically ill, female/child‑headed households, unaccompanied minors, and the elderly. Environmentally conscious distribution.</p></div>
+                </div>
+                <!-- Health & Nutrition -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden reveal reveal-delay-2 group">
+                    <div class="h-48 prog-card-health relative flex items-end p-5 overflow-hidden">
+                        <div class="absolute inset-0 bg-black/15 group-hover:bg-black/5 transition-colors"></div>
+                        <div class="relative z-10 text-white">
+                            <div class="w-11 h-11 bg-gold/90 rounded-xl flex items-center justify-center mb-3 shadow-lg"><i class="fa-solid fa-heart-pulse text-navy text-lg"></i></div>
+                            <h3 class="font-display font-semibold text-xl">Health & Nutrition</h3>
+                        </div>
+                        <div class="absolute top-3 right-3 text-white/20 text-5xl font-bold font-accent opacity-20">09</div>
+                    </div>
+                    <div class="p-5"><p class="text-gray-500 text-sm leading-relaxed">Support to health facilities and feeding centres, routine immunization, maternal child health, and nutrition services in hard‑to‑reach areas with the worst health indicators across South Sudan.</p></div>
+                </div>
+            </div>
+            <!-- C4A extra card -->
+            <div class="mt-8 flex justify-center">
+                <div class="card-hover bg-white rounded-2xl overflow-hidden max-w-md w-full reveal shadow-md group">
+                    <div class="h-40 bg-gradient-to-br from-gray-700 to-gray-500 relative flex items-end p-5 overflow-hidden">
+                        <div class="absolute inset-0 bg-black/15 group-hover:bg-black/5 transition-colors"></div>
+                        <div class="relative z-10 text-white">
+                            <div class="w-11 h-11 bg-gold/90 rounded-xl flex items-center justify-center mb-3 shadow-lg"><i class="fa-solid fa-bullhorn text-navy text-lg"></i></div>
+                            <h3 class="font-display font-semibold text-xl">Communication & Advocacy (C4A)</h3>
+                        </div>
+                    </div>
+                    <div class="p-5"><p class="text-gray-500 text-sm leading-relaxed">Behavior change communication, social mobilization, engagement of civil society, faith‑based organizations, and private sector. Evidence‑based communication strategies to influence social norms, amplify community voices, and promote human rights approaches.</p></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Impact Section -->
-    <section id="impact" class="relative py-28 lg:py-36 overflow-hidden bg-navy">
-        <div class="absolute inset-0"><img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1920&q=80" class="w-full h-full object-cover filter brightness-75"><div class="absolute inset-0 overlay-impact"></div></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
-            <div class="reveal mb-12"><span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Our Reach</span><h2 class="font-display text-4xl lg:text-5xl font-bold text-white mt-3">Creating <span class="text-gold italic">Measurable Impact</span></h2></div>
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="reveal reveal-delay-1"><div class="text-gold font-display text-5xl lg:text-6xl font-bold counter" data-target="5000">0</div><div class="text-white/80 text-lg">People Reached</div></div>
-                <div class="reveal reveal-delay-2"><div class="text-gold font-display text-5xl lg:text-6xl font-bold counter" data-target="30">0</div><div class="text-white/80 text-lg">Community Activities</div></div>
-                <div class="reveal reveal-delay-3"><div class="text-gold font-display text-5xl lg:text-6xl font-bold counter" data-target="2">0</div><div class="text-white/80 text-lg">States Covered</div></div>
-                <div class="reveal reveal-delay-4"><div class="text-gold font-display text-5xl lg:text-6xl font-bold counter" data-target="10">0</div><div class="text-white/80 text-lg">Active Partners</div></div>
+    <!-- Track Record / Projects -->
+    <section id="projects" class="py-20 lg:py-32 bg-white relative">
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-cream/50 rounded-full blur-4xl -z-0"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <span class="text-gold text-sm tracking-[0.22em] uppercase font-semibold font-accent">Delivery History</span>
+                <div class="section-accent-line mt-3 mx-auto"></div>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Track <span class="text-forest italic">Record</span></h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Implemented projects across multiple sectors, donors, and locations since 2017</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-project reveal">
+                    <div class="bg-navy p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2026 · UNMISS</span><h4 class="font-semibold mt-1.5 text-lg">Bor Central Prison Septic Tank</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">Construction of septic tank and soak pit to provide clean and safe sanitation facilities, reducing disease spread and improving hygiene among inmates and staff in Bor, Jonglei State.</div>
+                </div>
+                <div class="card-project reveal reveal-delay-1">
+                    <div class="bg-forest p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2025 · GIZ South Sudan</span><h4 class="font-semibold mt-1.5 text-lg">SGBV Prevention & Inclusion</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">Unpacking challenges women/girls with disabilities face, factors exacerbating GBV, testimonies from survivors, and structural barriers to empowerment — Shirakat, Rejef, Juba.</div>
+                </div>
+                <div class="card-project reveal reveal-delay-2">
+                    <div class="bg-navy p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2024 · Search for Common Ground</span><h4 class="font-semibold mt-1.5 text-lg">Youth Dialogue on School Drop-out</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">Youth dialogue identifying factors escalating high school drop-out in Sherikat, Rejef, Juba.</div>
+                </div>
+                <div class="card-project reveal">
+                    <div class="bg-forest p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2024‑25 · EDC</span><h4 class="font-semibold mt-1.5 text-lg">Youth Literacy & Numeracy</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">Youth Empowerment Activity expanding access to work‑ready skills for South Sudanese youth ages 15‑29 in Juba on basic literacy and numeracy.</div>
+                </div>
+                <div class="card-project reveal reveal-delay-1">
+                    <div class="bg-navy p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2024 · HelpLine South Sudan</span><h4 class="font-semibold mt-1.5 text-lg">Community Feedback Mechanism</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">Community feedback mechanism through dialogue and focus group discussions on helpline program in Bor Town.</div>
+                </div>
+                <div class="card-project reveal reveal-delay-2">
+                    <div class="bg-forest p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2024 · LM International</span><h4 class="font-semibold mt-1.5 text-lg">Menstrual Hygiene Management</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">MHM in 7 public schools, reaching 245 adolescent girls, PTAs, and SMCs in Bor South County.</div>
+                </div>
+                <div class="card-project reveal">
+                    <div class="bg-navy p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2023 · UNMISS</span><h4 class="font-semibold mt-1.5 text-lg">Women & Youth Skills Training</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">Women and Youth Empowerment on Skills training in Bor Town, Bor South County.</div>
+                </div>
+                <div class="card-project reveal reveal-delay-1">
+                    <div class="bg-forest p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2023 · UNMISS</span><h4 class="font-semibold mt-1.5 text-lg">Gadiang Police Post Construction</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">Construction of police office to facilitate rule of law in Gadiang, Duk County, Jonglei State.</div>
+                </div>
+                <div class="card-project reveal reveal-delay-2">
+                    <div class="bg-navy p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2021‑22 · UNAIDS/NASOSS</span><h4 class="font-semibold mt-1.5 text-lg">HIV Rights Advocacy</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">Community‑based advocacy against HIV‑related human rights violations and structural barriers in Jonglei State. Training of community stakeholders and outreach mobilizers.</div>
+                </div>
+                <div class="card-project reveal">
+                    <div class="bg-forest p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2021 · CRC/Save the Children</span><h4 class="font-semibold mt-1.5 text-lg">Children Rights & Protection Data</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">Community consultation, training of child protection networks, and advocacy on children's rights and protection in Bor Town, Jonglei State.</div>
+                </div>
+                <div class="card-project reveal reveal-delay-1">
+                    <div class="bg-navy p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2020 · UNICEF</span><h4 class="font-semibold mt-1.5 text-lg">COVID‑19 Prevention</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">Trained 355 host and IDP social mobilizers on COVID‑19 awareness. Distributed WASH supplies to 150 most vulnerable households in Bor Town.</div>
+                </div>
+                <div class="card-project reveal reveal-delay-2">
+                    <div class="bg-forest p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2019 · UNICEF</span><h4 class="font-semibold mt-1.5 text-lg">Hygiene & Sanitation for Schools</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">Formation and training of school hygiene clubs, distribution of WASH NFIs and dignity kits to school girls in Bor Town, Jonglei State.</div>
+                </div>
+                <div class="card-project reveal">
+                    <div class="bg-navy p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2019 · Democracy International</span><h4 class="font-semibold mt-1.5 text-lg">Good Governance & Accountability</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">Training of CSOs, youth, students, women groups, and community stakeholders in Juba, Central Equatoria State.</div>
+                </div>
+                <div class="card-project reveal reveal-delay-1">
+                    <div class="bg-forest p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2018 · UNICEF</span><h4 class="font-semibold mt-1.5 text-lg">Emergency WASH for IDPs</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">Training of 20 IDP hygiene promoters, distribution of WASH supplies to 348 most vulnerable households, and awareness campaigns in Bor Town.</div>
+                </div>
+                <div class="card-project reveal reveal-delay-2">
+                    <div class="bg-navy p-5 text-white"><span class="text-gold text-xs font-accent tracking-wider">2017‑2018 · PAH/UNICEF</span><h4 class="font-semibold mt-1.5 text-lg">Global Hand Washing Day</h4></div>
+                    <div class="p-5 text-sm text-gray-600 leading-relaxed">School mobilization, WASH supplies distribution, awareness campaigns, and dissemination of key hand washing messages in Bor Town — 2017 & 2018 editions.</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- News & Updates Section -->
-    <section id="news" class="py-20 lg:py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="text-center mb-16 reveal"><span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Stay Connected</span><h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Latest News & <span class="text-forest italic">Updates</span></h2></div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="reveal bg-cream rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-all">
-                    <div class="flex items-center gap-3 text-gold text-sm mb-3"><i class="fa-regular fa-calendar"></i> July 23, 2026</div>
-                    <h3 class="font-semibold text-navy text-lg mb-2">📰 Peacebuilding Coordination Meeting</h3>
-                    <p class="text-gray-500 text-sm">IDEA-South Sudan joined the Moral Orientation and Chaplaincy meeting organized by the National Ministry of Peace Building with UNDP support. The forum brought together CSOs, UNMISS, INGOs, and women associations to review peacebuilding initiatives and strengthen collaboration.</p>
-                    <a href="#" class="inline-flex items-center gap-1 text-forest font-semibold text-xs mt-4 hover:text-gold">Read More <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+    <!-- Memberships & Networks -->
+    <section id="memberships" class="py-20 lg:py-28 bg-cream relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-20 right-20 w-72 h-72 bg-gold/8 rounded-full blur-4xl"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-14 reveal">
+                <span class="text-gold text-sm tracking-[0.22em] uppercase font-semibold font-accent">Our Reach</span>
+                <div class="section-accent-line mt-3 mx-auto"></div>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Memberships & <span class="text-forest italic">Networks</span></h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="reveal bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all border border-transparent hover:border-gold/20">
+                    <div class="w-10 h-10 bg-navy/10 rounded-xl flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-water text-navy"></i></div>
+                    <p class="text-sm font-semibold text-navy">WASH Cluster</p>
                 </div>
-                <div class="reveal reveal-delay-1 bg-cream rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-all">
-                    <div class="flex items-center gap-3 text-gold text-sm mb-3"><i class="fa-regular fa-calendar"></i> July 20, 2026</div>
-                    <h3 class="font-semibold text-navy text-lg mb-2">📰 Community Dialogue in Bor</h3>
-                    <p class="text-gray-500 text-sm">Our team facilitated a community dialogue in Bor Town, bringing together youth, elders, and local authorities to discuss conflict prevention and social cohesion. The event emphasized the role of young people in early warning and mediation.</p>
-                    <a href="#" class="inline-flex items-center gap-1 text-forest font-semibold text-xs mt-4 hover:text-gold">Read More <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+                <div class="reveal reveal-delay-1 bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all border border-transparent hover:border-gold/20">
+                    <div class="w-10 h-10 bg-forest/10 rounded-xl flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-heart-pulse text-forest"></i></div>
+                    <p class="text-sm font-semibold text-navy">Health & Nutrition Cluster</p>
                 </div>
-                <div class="reveal reveal-delay-2 bg-cream rounded-2xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition-all">
-                    <div class="flex items-center gap-3 text-gold text-sm mb-3"><i class="fa-regular fa-calendar"></i> June 2026</div>
-                    <h3 class="font-semibold text-navy text-lg mb-2">📰 Youth Leadership Workshop Completed</h3>
-                    <p class="text-gray-500 text-sm">A three-day leadership training for 50 young leaders from Jonglei and Central Equatoria was successfully concluded, equipping participants with skills in advocacy, project management, and peace communication.</p>
-                    <a href="#" class="inline-flex items-center gap-1 text-forest font-semibold text-xs mt-4 hover:text-gold">Read More <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+                <div class="reveal reveal-delay-2 bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all border border-transparent hover:border-gold/20">
+                    <div class="w-10 h-10 bg-gold/10 rounded-xl flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-house-chimney text-gold"></i></div>
+                    <p class="text-sm font-semibold text-navy">Shelter/NFI Cluster</p>
+                </div>
+                <div class="reveal reveal-delay-3 bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all border border-transparent hover:border-gold/20">
+                    <div class="w-10 h-10 bg-navy/10 rounded-xl flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-wheat-awn text-navy"></i></div>
+                    <p class="text-sm font-semibold text-navy">FSL Cluster</p>
+                </div>
+                <div class="reveal bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all border border-transparent hover:border-gold/20">
+                    <div class="w-10 h-10 bg-forest/10 rounded-xl flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-school text-forest"></i></div>
+                    <p class="text-sm font-semibold text-navy">Education Cluster</p>
+                </div>
+                <div class="reveal reveal-delay-1 bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all border border-transparent hover:border-gold/20">
+                    <div class="w-10 h-10 bg-gold/10 rounded-xl flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-shield text-gold"></i></div>
+                    <p class="text-sm font-semibold text-navy">Protection Cluster</p>
+                </div>
+                <div class="reveal reveal-delay-2 bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all border border-transparent hover:border-gold/20">
+                    <div class="w-10 h-10 bg-navy/10 rounded-xl flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-handshake text-navy"></i></div>
+                    <p class="text-sm font-semibold text-navy">Jonglei Civil Society Network</p>
+                </div>
+                <div class="reveal reveal-delay-3 bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-all border border-transparent hover:border-gold/20">
+                    <div class="w-10 h-10 bg-forest/10 rounded-xl flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-globe text-forest"></i></div>
+                    <p class="text-sm font-semibold text-navy">South Sudan NGO Forum</p>
                 </div>
             </div>
+            <p class="text-center text-gray-500 text-sm mt-8 font-accent">Also member of: National Education Coalition (NEC), AfriYAN-South Sudan, Child Right Coalition (CRC), Charter for Change (C4C), NASOSS, and LRPF.</p>
         </div>
     </section>
 
-    <!-- Partners Carousel -->
-    <section id="partners" class="py-20 lg:py-32 bg-cream overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 mb-12 text-center reveal"><span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Collaboration</span><h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Our <span class="text-forest italic">Partners</span></h2></div>
-        <div class="partner-carousel-wrapper reveal">
-            <div class="partner-carousel-track py-4">
-                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-globe text-navy text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">UNDP</span></div></div>
-                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-handshake text-forest text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">UNMISS</span></div></div>
-                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-building-columns text-gold text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">Ministry of Peace Building</span></div></div>
-                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-users text-navy text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">CSO Network</span></div></div>
-                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-venus text-forest text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">Women Associations</span></div></div>
-                <!-- duplicates for loop -->
-                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-globe text-navy text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">UNDP</span></div></div>
-                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-handshake text-forest text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">UNMISS</span></div></div>
-                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-building-columns text-gold text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">Ministry of Peace Building</span></div></div>
-                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-users text-navy text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">CSO Network</span></div></div>
-                <div class="min-w-[200px] px-6"><div class="bg-white rounded-2xl p-6 text-center shadow-sm"><i class="fa-solid fa-venus text-forest text-2xl mb-2"></i><span class="text-sm font-semibold text-navy">Women Associations</span></div></div>
+    <!-- Partners Carousel with actual logos -->
+<section id="partners" class="py-20 lg:py-32 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 mb-14 text-center reveal">
+        <span class="text-gold text-sm tracking-[0.22em] uppercase font-semibold font-accent">Collaboration</span>
+        <div class="section-accent-line mt-3 mx-auto"></div>
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Trusted <span class="text-forest italic">Partners & Donors</span></h2>
+    </div>
+    <div class="partner-carousel-wrapper reveal">
+        <div class="partner-carousel-track py-6">
+            <!-- UNMISS -->
+            <div class="min-w-[190px] px-4">
+                <div class="partner-logo-card">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                        <img src="https://www.un.org/sites/un2.un.org/files/logo.svg" 
+                             alt="UNMISS" 
+                             class="w-full h-full object-contain" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-xl tracking-tight\'>UN</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-blue-700','to-blue-500'); this.parentElement.querySelector('span').classList.add('text-white');">
+                    </div>
+                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">UNMISS</span>
+                </div>
+            </div>
+            <!-- UNICEF -->
+            <div class="min-w-[190px] px-4">
+                <div class="partner-logo-card">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                        <img src="https://www.unicef.org/sites/default/files/UNICEF_logo.png" 
+                             alt="UNICEF" 
+                             class="w-full h-full object-contain" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-lg\'>U</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-cyan-600','to-blue-400'); this.parentElement.querySelector('span').classList.add('text-white');">
+                    </div>
+                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">UNICEF</span>
+                </div>
+            </div>
+            <!-- GIZ -->
+            <div class="min-w-[190px] px-4">
+                <div class="partner-logo-card">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                        <img src="https://www.giz.de/static/img/giz-logo.svg" 
+                             alt="GIZ" 
+                             class="w-full h-full object-contain" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-lg\'>GIZ</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-emerald-700','to-teal-500'); this.parentElement.querySelector('span').classList.add('text-white');">
+                    </div>
+                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">GIZ</span>
+                </div>
+            </div>
+            <!-- UNAIDS -->
+            <div class="min-w-[190px] px-4">
+                <div class="partner-logo-card">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                        <img src="https://www.unaids.org/sites/default/files/unaids-logo.svg" 
+                             alt="UNAIDS" 
+                             class="w-full h-full object-contain" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-sm\'>AIDS</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-red-700','to-rose-500'); this.parentElement.querySelector('span').classList.add('text-white');">
+                    </div>
+                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">UNAIDS</span>
+                </div>
+            </div>
+            <!-- EDC -->
+            <div class="min-w-[190px] px-4">
+                <div class="partner-logo-card">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                        <img src="https://www.edc.org/themes/custom/edc/logo.svg" 
+                             alt="EDC" 
+                             class="w-full h-full object-contain" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-lg\'>EDC</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-indigo-700','to-violet-500'); this.parentElement.querySelector('span').classList.add('text-white');">
+                    </div>
+                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">EDC</span>
+                </div>
+            </div>
+            <!-- Save the Children -->
+            <div class="min-w-[190px] px-4">
+                <div class="partner-logo-card">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                        <img src="https://www.savethechildren.org/content/dam/usa/images/global/logo.svg" 
+                             alt="Save the Children" 
+                             class="w-full h-full object-contain" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-xs\'>STC</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-red-600','to-orange-400'); this.parentElement.querySelector('span').classList.add('text-white');">
+                    </div>
+                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">Save the Children</span>
+                </div>
+            </div>
+            <!-- LM International -->
+            <div class="min-w-[190px] px-4">
+                <div class="partner-logo-card">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                        <img src="https://www.lakarmissionen.se/wp-content/themes/lm/img/lm-logo.svg" 
+                             alt="LM International" 
+                             class="w-full h-full object-contain" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-lg\'>LM</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-slate-600','to-slate-400'); this.parentElement.querySelector('span').classList.add('text-white');">
+                    </div>
+                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">LM International</span>
+                </div>
+            </div>
+            <!-- PAH -->
+            <div class="min-w-[190px] px-4">
+                <div class="partner-logo-card">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                        <img src="https://www.pah.org.pl/wp-content/themes/pah/img/logo.svg" 
+                             alt="PAH" 
+                             class="w-full h-full object-contain" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-xs\'>PAH</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-amber-600','to-yellow-400'); this.parentElement.querySelector('span').classList.add('text-white');">
+                    </div>
+                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">PAH</span>
+                </div>
+            </div>
+            <!-- Democracy International -->
+            <div class="min-w-[190px] px-4">
+                <div class="partner-logo-card">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                        <img src="https://www.democracyinternational.com/wp-content/themes/di/img/logo.svg" 
+                             alt="Democracy International" 
+                             class="w-full h-full object-contain" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-xs\'>DI</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-teal-700','to-teal-500'); this.parentElement.querySelector('span').classList.add('text-white');">
+                    </div>
+                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">Democracy Intl.</span>
+                </div>
+            </div>
+            <!-- Search for Common Ground -->
+            <div class="min-w-[190px] px-4">
+                <div class="partner-logo-card">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                        <img src="https://www.sfcg.org/wp-content/themes/sfcg/img/logo.svg" 
+                             alt="Search for Common Ground" 
+                             class="w-full h-full object-contain" 
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-xs\'>SFCG</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-sky-700','to-sky-500'); this.parentElement.querySelector('span').classList.add('text-white');">
+                    </div>
+                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">Search for Common Ground</span>
+                </div>
+            </div>
+            <!-- duplicates for seamless loop -->
+            <div class="min-w-[190px] px-4">
+                <div class="partner-logo-card">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                        <img src="https://www.un.org/sites/un2.un.org/files/logo.svg" alt="UNMISS" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-xl tracking-tight\'>UN</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-blue-700','to-blue-500');">
+                    </div>
+                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">UNMISS</span>
+                </div>
+            </div>
+            <div class="min-w-[190px] px-4">
+                <div class="partner-logo-card">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                        <img src="https://www.unicef.org/sites/default/files/UNICEF_logo.png" alt="UNICEF" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-lg\'>U</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-cyan-600','to-blue-400');">
+                    </div>
+                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">UNICEF</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Methodology Section -->
+    <section class="py-20 lg:py-28 bg-warm-gray relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none"><div class="absolute bottom-0 right-0 w-96 h-96 bg-gold/4 rounded-full blur-5xl"></div></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="text-gold text-sm tracking-[0.22em] uppercase font-semibold font-accent">Our Approach</span>
+                <div class="section-accent-line mt-3 mx-auto"></div>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Methodology & <span class="text-forest italic">Implementation</span></h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">A bottom‑up, community‑driven development approach that strengthens individual and community social development</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="reveal bg-white rounded-2xl p-7 shadow-md text-center hover:shadow-lg transition-all border-t-4 border-gold">
+                    <div class="w-12 h-12 bg-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><span class="font-display font-bold text-gold text-xl">I</span></div>
+                    <h4 class="font-semibold text-navy mb-2">Research Stage</h4>
+                    <p class="text-gray-500 text-xs leading-relaxed">Community entry, assessments & surveys, community meetings, asset mapping, problem identification, gap analysis, and collaborative solution design.</p>
+                </div>
+                <div class="reveal reveal-delay-1 bg-white rounded-2xl p-7 shadow-md text-center hover:shadow-lg transition-all border-t-4 border-forest">
+                    <div class="w-12 h-12 bg-forest/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><span class="font-display font-bold text-forest text-xl">II</span></div>
+                    <h4 class="font-semibold text-navy mb-2">Design Stage</h4>
+                    <p class="text-gray-500 text-xs leading-relaxed">Writing community‑approved projects, consultation with communities, proposal development, work plans, and budgeting with detailed technical and operational arrangements.</p>
+                </div>
+                <div class="reveal reveal-delay-2 bg-white rounded-2xl p-7 shadow-md text-center hover:shadow-lg transition-all border-t-4 border-gold">
+                    <div class="w-12 h-12 bg-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><span class="font-display font-bold text-gold text-xl">III</span></div>
+                    <h4 class="font-semibold text-navy mb-2">Implementation</h4>
+                    <p class="text-gray-500 text-xs leading-relaxed">Exploration, installation, initial and full implementation phases. Carrying out activities described in work plans with active community participation.</p>
+                </div>
+                <div class="reveal reveal-delay-3 bg-white rounded-2xl p-7 shadow-md text-center hover:shadow-lg transition-all border-t-4 border-forest">
+                    <div class="w-12 h-12 bg-forest/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><span class="font-display font-bold text-forest text-xl">IV</span></div>
+                    <h4 class="font-semibold text-navy mb-2">Evaluation</h4>
+                    <p class="text-gray-500 text-xs leading-relaxed">Formative and process evaluation during implementation, summative outcome & impact evaluation at completion, and dissemination reporting of significant challenges and successes.</p>
+                </div>
+            </div>
+            <div class="mt-10 reveal bg-white rounded-2xl p-7 shadow-md max-w-3xl mx-auto text-center">
+                <h4 class="font-semibold text-navy text-lg mb-3">IDEA-SS Community Engagement Actions for Change (CEAC)</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Our initiative approach supports communities to engage in modern community‑led activities, combining community‑driven development with humanitarian assistance. Ideas are generated from common people, built upon communities' own resources, solidarity, and skills — using local knowledge and expertise to reduce loss of life and economic impacts from shocks and stresses.</p>
             </div>
         </div>
     </section>
 
     <!-- Volunteer CTA -->
     <section id="volunteer" class="py-20 lg:py-28 bg-navy relative overflow-hidden">
-        <div class="absolute inset-0 opacity-15"><div class="absolute top-0 right-0 w-96 h-96 bg-gold rounded-full blur-3xl"></div><div class="absolute bottom-0 left-0 w-72 h-72 bg-forest rounded-full blur-3xl"></div></div>
+        <div class="absolute inset-0 opacity-12 pointer-events-none">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold rounded-full blur-5xl"></div>
+            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-forest rounded-full blur-5xl"></div>
+        </div>
         <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <div class="reveal">
-                <span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Get Involved</span>
-                <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mt-3 leading-tight">Join Us as a <span class="text-gold italic">Volunteer</span></h2>
-                <p class="text-white/70 mt-4 max-w-lg mx-auto text-lg leading-relaxed">Your time and talent can make a real difference. Volunteer with IDEA-South Sudan and help build peaceful, resilient communities.</p>
-                <a href="#contact" class="inline-flex items-center gap-2 bg-gold text-navy font-bold px-10 py-4 rounded-full mt-8 hover:bg-gold-light transition-all duration-300 shadow-2xl shadow-gold/30 text-lg pulse-gold">
+                <span class="text-gold text-sm tracking-[0.22em] uppercase font-semibold font-accent">Join Us</span>
+                <div class="section-accent-line mt-3 mx-auto"></div>
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-white mt-3 leading-tight">Volunteer for <span class="text-gold italic">Humanity</span></h2>
+                <p class="text-white/65 mt-5 max-w-lg mx-auto text-lg leading-relaxed">Be part of community‑led change. Your skills, time, and heart can help strengthen resilience and transform lives across South Sudan. Join IDEA-SS in enhancing humanity.</p>
+                <a href="#contact" class="inline-flex items-center gap-2 bg-gold text-navy font-bold px-10 py-4 rounded-full mt-8 hover:bg-gold-light shadow-2xl shadow-gold/25 text-lg pulse-gold transition-all duration-300 font-accent tracking-wide">
                     Sign Up to Volunteer <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
             </div>
@@ -346,27 +1059,44 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 lg:py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="grid lg:grid-cols-2 gap-12">
+    <section id="contact" class="py-20 lg:py-32 bg-white relative">
+        <div class="absolute top-0 left-0 w-80 h-80 bg-cream/60 rounded-full blur-4xl -z-0"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-14">
                 <div class="space-y-8 reveal">
-                    <span class="text-gold text-sm tracking-[0.2em] uppercase font-semibold">Get In Touch</span>
+                    <div>
+                        <span class="text-gold text-sm tracking-[0.22em] uppercase font-semibold font-accent">Get In Touch</span>
+                        <div class="section-accent-line mt-3"></div>
+                    </div>
                     <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy">Contact <span class="text-forest italic">Us</span></h2>
-                    <div class="space-y-5">
-                        <div class="flex gap-4"><div class="w-11 h-11 bg-gold/15 rounded-xl flex items-center justify-center"><i class="fa-solid fa-location-dot text-gold"></i></div><div><h4 class="font-semibold text-navy">Head Office</h4><p class="text-gray-500">Bor Town, Jonglei State, South Sudan</p><p class="text-gray-500 text-sm">(Operations also in Juba)</p></div></div>
-                        <div class="flex gap-4"><div class="w-11 h-11 bg-forest/15 rounded-xl flex items-center justify-center"><i class="fa-solid fa-envelope text-forest"></i></div><div><h4 class="font-semibold text-navy">Email</h4><p class="text-gray-500">info@idea-ss.com</p></div></div>
-                        <div class="flex gap-4"><div class="w-11 h-11 bg-navy/10 rounded-xl flex items-center justify-center"><i class="fa-solid fa-phone text-navy"></i></div><div><h4 class="font-semibold text-navy">Phone</h4><p class="text-gray-500">+211 915 088 344</p></div></div>
-                        <div class="flex gap-4"><div class="w-11 h-11 bg-gold/15 rounded-xl flex items-center justify-center"><i class="fa-solid fa-globe text-gold"></i></div><div><h4 class="font-semibold text-navy">Website</h4><p class="text-gray-500">www.idea-ss.org</p></div></div>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 bg-gold/12 rounded-2xl flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-location-dot text-gold text-lg"></i></div>
+                            <div><h4 class="font-semibold text-navy text-lg">Head Office</h4><p class="text-gray-500">Bor Town, Jonglei State, South Sudan</p><p class="text-gray-400 text-sm">Coordination Office: Juba, Central Equatoria</p></div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 bg-forest/10 rounded-2xl flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-envelope text-forest text-lg"></i></div>
+                            <div><h4 class="font-semibold text-navy text-lg">Email</h4><p class="text-gray-500">info@idea-ss.org</p><p class="text-gray-400 text-sm">mabil@idea-ss.org (Executive Director)</p></div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 bg-navy/8 rounded-2xl flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-phone text-navy text-lg"></i></div>
+                            <div><h4 class="font-semibold text-navy text-lg">Phone</h4><p class="text-gray-500">+211 915 088 344 / +211 926 088 344</p><p class="text-gray-400 text-sm">Executive Director: +211 985 088 344</p></div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 bg-gold/12 rounded-2xl flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-user text-gold text-lg"></i></div>
+                            <div><h4 class="font-semibold text-navy text-lg">Contact Person</h4><p class="text-gray-500">Michael Mabil Bol</p><p class="text-gray-400 text-sm">Executive Director, IDEA-South Sudan</p></div>
+                        </div>
                     </div>
                 </div>
-                <div class="reveal reveal-delay-2 bg-cream rounded-2xl p-6 sm:p-8 shadow-lg">
+                <div class="reveal reveal-delay-2 bg-cream rounded-2xl p-7 sm:p-9 shadow-xl border border-cream-dark">
+                    <h3 class="font-display font-semibold text-navy text-xl mb-6">Send Us a Message</h3>
                     <form class="space-y-5">
                         <div class="grid sm:grid-cols-2 gap-4">
-                            <input type="text" placeholder="Name" class="w-full px-4 py-3 rounded-xl border bg-white">
-                            <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-xl border bg-white">
+                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all text-sm">
+                            <input type="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all text-sm">
                         </div>
-                        <textarea rows="4" placeholder="Message" class="w-full px-4 py-3 rounded-xl border bg-white"></textarea>
-                        <button type="submit" class="w-full bg-navy text-white font-semibold py-3.5 rounded-xl hover:bg-navy-light flex items-center justify-center gap-2">Send Message <i class="fa-solid fa-paper-plane text-xs"></i></button>
+                        <textarea rows="4" placeholder="How can we work together?" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold transition-all text-sm"></textarea>
+                        <button type="submit" class="w-full bg-navy text-white font-semibold py-3.5 rounded-xl hover:bg-navy-light flex items-center justify-center gap-2 transition-all duration-300 shadow-lg font-accent tracking-wide">Send Message <i class="fa-solid fa-paper-plane text-xs"></i></button>
                     </form>
                 </div>
             </div>
@@ -376,29 +1106,53 @@
     <!-- Footer -->
     <footer class="bg-navy text-white pt-20 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
-            <div class="space-y-4">
-                <div class="flex items-center gap-3"><div class="w-11 h-11 bg-gold rounded-lg flex items-center justify-center"><span class="font-display font-bold text-navy text-lg">IDEA</span></div><span class="font-display font-semibold text-xl">IDEA-South Sudan</span></div>
-                <p class="text-white/55 text-sm max-w-sm">Youth-led humanitarian and development organization fostering peace and resilience in South Sudan.</p>
+            <div class="space-y-5">
+                <div class="flex items-center gap-3">
+                    <div class="logo-svg-container" style="width:42px;height:42px;border-radius:12px;">
+                        <svg width="26" height="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="36" height="36" rx="8" fill="none" stroke="#D4A017" stroke-width="1.8"/>
+                            <text x="20" y="19" text-anchor="middle" dominant-baseline="middle" fill="#D4A017" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="15" letter-spacing="1">IDEA</text>
+                            <circle cx="32" cy="9" r="3.5" fill="#e8b830" opacity="0.9"/>
+                        </svg>
+                    </div>
+                    <span class="font-display font-semibold text-xl">IDEA-South Sudan</span>
+                </div>
+                <p class="text-white/50 text-sm max-w-sm leading-relaxed">A national non‑profit humanitarian and development organization registered under the NGO Act 2016, Republic of South Sudan. Founded in 2018. "Enhancing Humanity."</p>
             </div>
-            <div><h4 class="font-semibold text-white mb-4 text-sm uppercase">Quick Links</h4><ul class="space-y-2.5 text-white/55 text-sm"><li><a href="#" class="hover:text-gold">Home</a></li><li><a href="#about" class="hover:text-gold">About</a></li><li><a href="#programs" class="hover:text-gold">Programs</a></li><li><a href="#impact" class="hover:text-gold">Impact</a></li><li><a href="#news" class="hover:text-gold">News & Updates</a></li><li><a href="#volunteer" class="hover:text-gold">Volunteer</a></li></ul></div>
-            <div><h4 class="font-semibold text-white mb-4 text-sm uppercase">Programs</h4><ul class="space-y-2.5 text-white/55 text-sm"><li><a href="#programs" class="hover:text-gold">Peacebuilding</a></li><li><a href="#programs" class="hover:text-gold">Humanitarian Assistance</a></li><li><a href="#programs" class="hover:text-gold">Community Development</a></li><li><a href="#programs" class="hover:text-gold">Youth Empowerment</a></li><li><a href="#programs" class="hover:text-gold">Advocacy & Engagement</a></li></ul></div>
-            <div><h4 class="font-semibold text-white mb-4 text-sm uppercase">Contact</h4><ul class="space-y-2.5 text-white/55 text-sm"><li class="flex gap-2"><i class="fa-solid fa-location-dot text-gold mt-0.5"></i> Bor Town, Jonglei State</li><li class="flex gap-2"><i class="fa-solid fa-envelope text-gold mt-0.5"></i> info@idea-ss.com</li><li class="flex gap-2"><i class="fa-solid fa-phone text-gold mt-0.5"></i> +211 915 088 344</li><li class="flex gap-2"><i class="fa-solid fa-globe text-gold mt-0.5"></i> www.idea-ss.org</li></ul></div>
+            <div>
+                <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider font-accent">Quick Links</h4>
+                <ul class="space-y-3 text-white/50 text-sm">
+                    <li><a href="#" class="hover:text-gold transition-colors">Home</a></li>
+                    <li><a href="#about" class="hover:text-gold transition-colors">About</a></li>
+                    <li><a href="#programs" class="hover:text-gold transition-colors">Programs</a></li>
+                    <li><a href="#projects" class="hover:text-gold transition-colors">Track Record</a></li>
+                    <li><a href="#memberships" class="hover:text-gold transition-colors">Networks</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider font-accent">Program Areas</h4>
+                <ul class="space-y-3 text-white/50 text-sm">
+                    <li><a href="#programs" class="hover:text-gold transition-colors">WASH</a></li>
+                    <li><a href="#programs" class="hover:text-gold transition-colors">Food Security & Livelihoods</a></li>
+                    <li><a href="#programs" class="hover:text-gold transition-colors">Health & Nutrition</a></li>
+                    <li><a href="#programs" class="hover:text-gold transition-colors">Peacebuilding</a></li>
+                    <li><a href="#programs" class="hover:text-gold transition-colors">Protection & Education</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider font-accent">Contact</h4>
+                <ul class="space-y-3 text-white/50 text-sm">
+                    <li class="flex gap-2"><i class="fa-solid fa-location-dot text-gold mt-0.5 flex-shrink-0"></i> Bor, Jonglei State & Juba, Central Equatoria</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-envelope text-gold mt-0.5 flex-shrink-0"></i> info@idea-ss.org</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-phone text-gold mt-0.5 flex-shrink-0"></i> +211 915 088 344</li>
+                    <li class="flex gap-2"><i class="fa-solid fa-user text-gold mt-0.5 flex-shrink-0"></i> Michael Mabil Bol (Executive Director)</li>
+                </ul>
+            </div>
         </div>
-        <div class="border-t border-white/10 pt-6 text-center text-white/40 text-xs">&copy; 2026 IDEA-South Sudan. All rights reserved. A youth-led non-profit organization in South Sudan.</div>
+        <div class="border-t border-white/8 pt-6 text-center text-white/35 text-xs">
+            &copy; 2026 Initiative for Development and Emergency Action – South Sudan (IDEA-SS). All rights reserved. Registered under NGO Act 2016, Republic of South Sudan. "Enhancing Humanity"
+        </div>
     </footer>
-
-    <!-- Logo image container style (same as before) -->
-    <style>
-        .logo-image-container {
-            width: 44px; height: 44px; border-radius: 12px; overflow: hidden;
-            display: flex; align-items: center; justify-content: center;
-            background: rgba(255,255,255,0.1); backdrop-filter: blur(8px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15); transition: all 0.3s ease;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-        .logo-image { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 12px; }
-        .logo-image-container:hover { transform: translateY(-1px); box-shadow: 0 8px 25px rgba(212,160,23,0.3); border-color: rgba(212,160,23,0.4); background: rgba(255,255,255,0.2); }
-    </style>
 
     <script>
         function toggleMobileDropdown(button) {
@@ -411,11 +1165,12 @@
 
         (function() {
             const mainNav = document.getElementById('mainNav');
+
             function updateNav() {
                 const scrollY = window.scrollY;
                 const isMobile = window.innerWidth < 1024;
                 mainNav.style.top = (scrollY > 80 || isMobile) ? '0' : '37px';
-                mainNav.classList.toggle('glass-dark', scrollY > 80);
+                if (scrollY > 80) { mainNav.classList.add('glass-dark'); } else { mainNav.classList.remove('glass-dark'); }
             }
             window.addEventListener('scroll', updateNav, { passive: true });
             window.addEventListener('resize', updateNav);
@@ -438,30 +1193,13 @@
             });
 
             const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
-            }, { rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) { entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target); }
+                });
+            }, { rootMargin: '0px 0px -60px 0px', threshold: 0.08 });
             document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
             document.querySelectorAll('.img-reveal').forEach(el => revealObserver.observe(el));
-
-            const counterObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const counter = entry.target;
-                        const target = parseInt(counter.getAttribute('data-target'));
-                        const duration = 2000;
-                        const start = performance.now();
-                        function animate(now) {
-                            const progress = Math.min((now - start) / duration, 1);
-                            counter.textContent = Math.floor((1 - Math.pow(1 - progress, 3)) * target) + '+';
-                            if (progress < 1) requestAnimationFrame(animate);
-                            else counter.textContent = target + '+';
-                        }
-                        requestAnimationFrame(animate);
-                        counterObserver.unobserve(counter);
-                    }
-                });
-            }, { threshold: 0.5 });
-            document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
 
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
@@ -470,7 +1208,8 @@
                     const target = document.querySelector(href);
                     if (target) {
                         e.preventDefault();
-                        window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - mainNav.offsetHeight - 20, behavior: 'smooth' });
+                        window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - mainNav
+                                .offsetHeight - 20, behavior: 'smooth' });
                     }
                 });
             });
@@ -480,9 +1219,14 @@
                 form.addEventListener('submit', function(e) {
                     e.preventDefault();
                     const btn = form.querySelector('button[type="submit"]');
+                    const originalHTML = btn.innerHTML;
                     btn.innerHTML = '<i class="fa-solid fa-check"></i> Message Sent!';
                     btn.classList.add('bg-forest');
-                    setTimeout(() => { btn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane text-xs"></i>'; btn.classList.remove('bg-forest'); form.reset(); }, 2500);
+                    btn.disabled = true;
+                    setTimeout(() => { btn.innerHTML = originalHTML;
+                        btn.classList.remove('bg-forest');
+                        btn.disabled = false;
+                        form.reset(); }, 2500);
                 });
             }
         })();
