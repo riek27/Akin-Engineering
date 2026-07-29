@@ -268,12 +268,16 @@
         .partner-logo-card {
             background: white;
             border-radius: 18px;
-            padding: 1.5rem 1.8rem;
+            padding: 1.5rem 1.2rem;
             text-align: center;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
             transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
             border: 1px solid rgba(0, 0, 0, 0.05);
             cursor: default;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
         }
         .partner-logo-card:hover {
             transform: translateY(-6px);
@@ -380,8 +384,8 @@
                     <a href="#projects" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">Track Record</a>
                     <a href="#memberships" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">Networks</a>
                     <a href="#partners" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">Partners</a>
-                     <a href="#impact" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">Impact</a>
-                     <a href="#news" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">News & update</a>
+                    <a href="#impact" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">Impact</a>
+                    <a href="#news" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">News & update</a>
                     <a href="#contact" class="text-white/90 hover:text-gold px-3 py-2 text-sm font-medium transition-colors">Contact</a>
                 </div>
                 <div class="hidden lg:block">
@@ -477,7 +481,7 @@
     </section>
 
     <!-- Background / Why We Exist -->
-    <section class="py-20 lg:py-28 bg-cream relative overflow-hidden">
+    <section class="py-20 lg:py-28 bg-cream relative overflow-hidden" id="background">
         <div class="absolute inset-0 opacity-8 pointer-events-none">
             <div class="absolute top-10 right-10 w-80 h-80 bg-gold/20 rounded-full blur-3xl"></div>
             <div class="absolute bottom-10 left-10 w-96 h-96 bg-forest/15 rounded-full blur-3xl"></div>
@@ -850,155 +854,127 @@
         </div>
     </section>
 
-    <!-- Partners Carousel with actual logos -->
-<section id="partners" class="py-20 lg:py-32 bg-white overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 mb-14 text-center reveal">
-        <span class="text-gold text-sm tracking-[0.22em] uppercase font-semibold font-accent">Collaboration</span>
-        <div class="section-accent-line mt-3 mx-auto"></div>
-        <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Trusted <span class="text-forest italic">Partners & Donors</span></h2>
-    </div>
-    <div class="partner-carousel-wrapper reveal">
-        <div class="partner-carousel-track py-6">
-            <!-- UNMISS -->
-            <div class="min-w-[190px] px-4">
-                <div class="partner-logo-card">
-                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
-                        <img src="assets/idealogo2.png" 
-                             alt="UNMISS" 
-                             class="w-full h-full object-contain" 
-                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-xl tracking-tight\'>UN</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-blue-700','to-blue-500'); this.parentElement.querySelector('span').classList.add('text-white');">
+    <!-- Partners Carousel - Logo Only (No Names) -->
+    <section id="partners" class="py-20 lg:py-32 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 mb-14 text-center reveal">
+            <span class="text-gold text-sm tracking-[0.22em] uppercase font-semibold font-accent">Collaboration</span>
+            <div class="section-accent-line mt-3 mx-auto"></div>
+            <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy mt-3">Trusted <span class="text-forest italic">Partners & Donors</span></h2>
+        </div>
+        <div class="partner-carousel-wrapper reveal">
+            <div class="partner-carousel-track py-6">
+                <!-- UNMISS -->
+                <div class="min-w-[140px] px-3">
+                    <div class="partner-logo-card">
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                            <img src="assets/idealogo2.png" alt="UNMISS" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-blue-700','to-blue-500'); this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-xl tracking-tight\'>UN</span>';">
+                        </div>
                     </div>
-                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">UNMISS</span>
                 </div>
-            </div>
-            <!-- UNICEF -->
-            <div class="min-w-[190px] px-4">
-                <div class="partner-logo-card">
-                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
-                        <img src="assets/idealogo1.png" 
-                             alt="UNICEF" 
-                             class="w-full h-full object-contain" 
-                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-lg\'>U</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-cyan-600','to-blue-400'); this.parentElement.querySelector('span').classList.add('text-white');">
+                <!-- UNICEF -->
+                <div class="min-w-[140px] px-3">
+                    <div class="partner-logo-card">
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                            <img src="assets/idealogo1.png" alt="UNICEF" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-cyan-600','to-blue-400'); this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-lg\'>U</span>';">
+                        </div>
                     </div>
-                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">UNICEF</span>
                 </div>
-            </div>
-            <!-- GIZ -->
-            <div class="min-w-[190px] px-4">
-                <div class="partner-logo-card">
-                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
-                        <img src="assets/idealogo10.png" 
-                             alt="GIZ" 
-                             class="w-full h-full object-contain" 
-                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-lg\'>GIZ</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-emerald-700','to-teal-500'); this.parentElement.querySelector('span').classList.add('text-white');">
+                <!-- GIZ -->
+                <div class="min-w-[140px] px-3">
+                    <div class="partner-logo-card">
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                            <img src="assets/idealogo10.png" alt="GIZ" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-emerald-700','to-teal-500'); this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-lg\'>GIZ</span>';">
+                        </div>
                     </div>
-                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">GIZ</span>
                 </div>
-            </div>
-            <!-- UNAIDS -->
-            <div class="min-w-[190px] px-4">
-                <div class="partner-logo-card">
-                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
-                        <img src="assets/idealogo9.png" 
-                             alt="UNAIDS" 
-                             class="w-full h-full object-contain" 
-                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-sm\'>AIDS</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-red-700','to-rose-500'); this.parentElement.querySelector('span').classList.add('text-white');">
+                <!-- UNAIDS -->
+                <div class="min-w-[140px] px-3">
+                    <div class="partner-logo-card">
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                            <img src="assets/idealogo9.png" alt="UNAIDS" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-red-700','to-rose-500'); this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-sm\'>AIDS</span>';">
+                        </div>
                     </div>
-                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">UNAIDS</span>
                 </div>
-            </div>
-            <!-- EDC -->
-            <div class="min-w-[190px] px-4">
-                <div class="partner-logo-card">
-                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
-                        <img src="assets/idealogo8.png" 
-                             alt="EDC" 
-                             class="w-full h-full object-contain" 
-                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-lg\'>EDC</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-indigo-700','to-violet-500'); this.parentElement.querySelector('span').classList.add('text-white');">
+                <!-- EDC -->
+                <div class="min-w-[140px] px-3">
+                    <div class="partner-logo-card">
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                            <img src="assets/idealogo8.png" alt="EDC" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-indigo-700','to-violet-500'); this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-lg\'>EDC</span>';">
+                        </div>
                     </div>
-                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">EDC</span>
                 </div>
-            </div>
-            <!-- Save the Children -->
-            <div class="min-w-[190px] px-4">
-                <div class="partner-logo-card">
-                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
-                        <img src="assets/idealogo7.png" 
-                             alt="Save the Children" 
-                             class="w-full h-full object-contain" 
-                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-xs\'>STC</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-red-600','to-orange-400'); this.parentElement.querySelector('span').classList.add('text-white');">
+                <!-- Save the Children -->
+                <div class="min-w-[140px] px-3">
+                    <div class="partner-logo-card">
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                            <img src="assets/idealogo7.png" alt="Save the Children" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-red-600','to-orange-400'); this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-xs\'>STC</span>';">
+                        </div>
                     </div>
-                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">Save the Children</span>
                 </div>
-            </div>
-            <!-- LM International -->
-            <div class="min-w-[190px] px-4">
-                <div class="partner-logo-card">
-                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
-                        <img src="assets/idealogo6.png" 
-                             alt="LM International" 
-                             class="w-full h-full object-contain" 
-                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-lg\'>LM</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-slate-600','to-slate-400'); this.parentElement.querySelector('span').classList.add('text-white');">
+                <!-- LM International -->
+                <div class="min-w-[140px] px-3">
+                    <div class="partner-logo-card">
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                            <img src="assets/idealogo6.png" alt="LM International" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-slate-600','to-slate-400'); this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-lg\'>LM</span>';">
+                        </div>
                     </div>
-                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">LM International</span>
                 </div>
-            </div>
-            <!-- PAH -->
-            <div class="min-w-[190px] px-4">
-                <div class="partner-logo-card">
-                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
-                        <img src="assets/idealogo5.png" 
-                             alt="PAH" 
-                             class="w-full h-full object-contain" 
-                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-xs\'>PAH</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-amber-600','to-yellow-400'); this.parentElement.querySelector('span').classList.add('text-white');">
+                <!-- PAH -->
+                <div class="min-w-[140px] px-3">
+                    <div class="partner-logo-card">
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                            <img src="assets/idealogo5.png" alt="PAH" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-amber-600','to-yellow-400'); this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-xs\'>PAH</span>';">
+                        </div>
                     </div>
-                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">PAH</span>
                 </div>
-            </div>
-            <!-- Democracy International -->
-            <div class="min-w-[190px] px-4">
-                <div class="partner-logo-card">
-                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
-                        <img src="assets/idealogo4.png" 
-                             alt="Democracy International" 
-                             class="w-full h-full object-contain" 
-                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-xs\'>DI</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-teal-700','to-teal-500'); this.parentElement.querySelector('span').classList.add('text-white');">
+                <!-- Democracy International -->
+                <div class="min-w-[140px] px-3">
+                    <div class="partner-logo-card">
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                            <img src="assets/idealogo4.png" alt="Democracy International" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-teal-700','to-teal-500'); this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-xs\'>DI</span>';">
+                        </div>
                     </div>
-                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">Democracy Intl.</span>
                 </div>
-            </div>
-            <!-- Search for Common Ground -->
-            <div class="min-w-[190px] px-4">
-                <div class="partner-logo-card">
-                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
-                        <img src="assets/idealogo3.png" 
-                             alt="Search for Common Ground" 
-                             class="w-full h-full object-contain" 
-                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-navy text-xs\'>SFCG</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-sky-700','to-sky-500'); this.parentElement.querySelector('span').classList.add('text-white');">
+                <!-- Search for Common Ground -->
+                <div class="min-w-[140px] px-3">
+                    <div class="partner-logo-card">
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                            <img src="assets/idealogo3.png" alt="Search for Common Ground" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-sky-700','to-sky-500'); this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-xs\'>SFCG</span>';">
+                        </div>
                     </div>
-                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">Search for Common Ground</span>
                 </div>
-            </div>
-            <!-- duplicates for seamless loop -->
-            <div class="min-w-[190px] px-4">
-                <div class="partner-logo-card">
-                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
-                        <img src="assets/idealogo2.png" alt="UNMISS" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-xl tracking-tight\'>UN</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-blue-700','to-blue-500');">
+                <!-- Duplicates for seamless loop -->
+                <div class="min-w-[140px] px-3">
+                    <div class="partner-logo-card">
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                            <img src="assets/idealogo2.png" alt="UNMISS" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-blue-700','to-blue-500'); this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-xl tracking-tight\'>UN</span>';">
+                        </div>
                     </div>
-                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">UNMISS</span>
                 </div>
-            </div>
-            <div class="min-w-[190px] px-4">
-                <div class="partner-logo-card">
-                    <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
-                        <img src="assets/idealogo1.png" alt="UNICEF" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-lg\'>U</span>'; this.parentElement.classList.add('bg-gradient-to-br','from-cyan-600','to-blue-400');">
+                <div class="min-w-[140px] px-3">
+                    <div class="partner-logo-card">
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                            <img src="assets/idealogo1.png" alt="UNICEF" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-cyan-600','to-blue-400'); this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-lg\'>U</span>';">
+                        </div>
                     </div>
-                    <span class="text-sm font-semibold text-navy font-accent tracking-wide">UNICEF</span>
+                </div>
+                <div class="min-w-[140px] px-3">
+                    <div class="partner-logo-card">
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                            <img src="assets/idealogo10.png" alt="GIZ" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-emerald-700','to-teal-500'); this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-lg\'>GIZ</span>';">
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[140px] px-3">
+                    <div class="partner-logo-card">
+                        <div class="w-16 h-16 mx-auto rounded-2xl bg-white flex items-center justify-center shadow-md overflow-hidden p-1">
+                            <img src="assets/idealogo9.png" alt="UNAIDS" class="w-full h-full object-contain" onerror="this.style.display='none'; this.parentElement.classList.add('bg-gradient-to-br','from-red-700','to-rose-500'); this.parentElement.innerHTML='<span class=\'font-accent font-bold text-white text-sm\'>AIDS</span>';">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Methodology Section -->
     <section class="py-20 lg:py-28 bg-warm-gray relative overflow-hidden">
@@ -1192,14 +1168,27 @@
                 });
             });
 
+            // FIXED: Intersection Observer with mobile-friendly rootMargin (was -60px, now 0px)
+            // Added safety timeout fallback to ensure all reveal elements become visible on all devices
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) { entry.target.classList.add('visible');
-                        revealObserver.unobserve(entry.target); }
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
                 });
-            }, { rootMargin: '0px 0px -60px 0px', threshold: 0.08 });
+            }, { rootMargin: '0px', threshold: 0.05 });
+
             document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
             document.querySelectorAll('.img-reveal').forEach(el => revealObserver.observe(el));
+
+            // Safety fallback: after 2.5 seconds, force any still-hidden elements to become visible
+            // This catches edge cases on mobile where IntersectionObserver may not fire reliably
+            setTimeout(() => {
+                document.querySelectorAll('.reveal:not(.visible), .img-reveal:not(.visible)').forEach(el => {
+                    el.classList.add('visible');
+                });
+            }, 2500);
 
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
@@ -1233,3 +1222,6 @@
     </script>
 </body>
 </html>
+
+
+
